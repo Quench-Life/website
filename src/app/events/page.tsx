@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -55,6 +56,17 @@ export default function EventsPage() {
             <p className="mt-3 text-sm leading-6 text-slate-700">{ministry.description}</p>
           </article>
         ))}
+      </section>
+
+      <section className="grid gap-6 md:grid-cols-2">
+        <Link href="/men" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:bg-slate-100">
+          <h3 className="text-lg font-semibold text-slate-900">Men&apos;s Discipleship</h3>
+          <p className="mt-2 text-sm leading-6 text-slate-700">Learn more about the MEANTorship Project.</p>
+        </Link>
+        <Link href="/women" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:bg-slate-100">
+          <h3 className="text-lg font-semibold text-slate-900">Women&apos;s Discipleship</h3>
+          <p className="mt-2 text-sm leading-6 text-slate-700">Learn more about Purpose Driven Women.</p>
+        </Link>
       </section>
 
       <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">

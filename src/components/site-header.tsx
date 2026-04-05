@@ -3,9 +3,12 @@ import { siteConfig } from "@/lib/site";
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/connect", label: "Connect" },
   { href: "/events", label: "Events" },
-  { href: "/visit", label: "Visit" },
+  { href: "/watch", label: "Watch" },
+  { href: "/listen", label: "Listen" },
+  { href: "/giving", label: "Give" },
+  { href: "/prayer", label: "Prayer" },
   { href: "/resources", label: "Resources" },
 ];
 
