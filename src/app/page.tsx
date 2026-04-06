@@ -50,8 +50,8 @@ export default function Home() {
             </div>
             <div className="relative min-h-[300px] lg:min-h-[500px]">
               <Image
-                src="/hero-community.jpg"
-                alt="A diverse group of people gathering together in community"
+                src="/hero-cross.jpg"
+                alt="A cross with uplifting sun rays"
                 fill
                 className="object-cover"
                 priority
