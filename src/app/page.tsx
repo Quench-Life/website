@@ -48,14 +48,16 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="relative min-h-[300px] lg:min-h-[500px]">
-              <Image
-                src="/hero-cross.jpg"
-                alt="A cross with uplifting sun rays"
-                fill
-                className="object-cover object-right"
-                priority
-              />
+            <div className="flex items-center justify-center p-8 sm:p-12 lg:pl-0">
+              <div className="relative w-full max-w-md aspect-square lg:aspect-[4/5] overflow-hidden rounded-2xl shadow-sm ring-1 ring-slate-200">
+                <Image
+                  src="/hero-cross.jpg"
+                  alt="A cross with uplifting sun rays"
+                  fill
+                  className="object-cover object-center"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </section>
