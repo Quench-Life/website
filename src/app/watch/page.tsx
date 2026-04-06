@@ -1,56 +1,78 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Watch",
-  description: "Join Quench Life Christian Fellowship online each Sunday and watch the latest message.",
+  title: "Watch Messages",
+  description: "Watch recent sermons from Quench Life Christian Fellowship in an embed-ready message library.",
 };
 
-export default function WatchPage() {
+const recentMessages = [
+  { title: "Faith That Overcomes", topic: "Faith", date: "This Week" },
+  { title: "Freedom Through Christ", topic: "Freedom", date: "Last Week" },
+  { title: "Healing for the Whole Person", topic: "Healing", date: "2 Weeks Ago" },
+  { title: "Purpose in Every Season", topic: "Purpose", date: "3 Weeks Ago" },
+];
+
+const topics = ["Faith", "Freedom", "Healing", "Purpose"];
+
+export default function WatchMessagesPage() {
   return (
     <div className="space-y-8">
-      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
-        <p className="text-sm font-semibold uppercase tracking-[0.15em] text-cyan-700">Watch</p>
-        <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Join us for worship online</h1>
-        <p className="mt-4 max-w-3xl text-slate-700">
-          We gather online every Sunday at 11:00 AM, with hybrid (in-person + online) services on the 1st and 3rd
-          Sundays.
+      <section className="rounded-2xl bg-slate-900 p-8 text-white shadow-sm sm:p-10">
+        <p className="text-sm font-semibold uppercase tracking-[0.15em] text-amber-200">Watch Messages</p>
+        <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Message Library</h1>
+        <p className="mt-4 max-w-3xl text-slate-200">
+          Explore recent sermons and watch encouragement rooted in Scripture. This layout is ready for YouTube embed
+          links as you publish new messages.
         </p>
-        <ul className="mt-5 space-y-2 text-slate-700">
-          {siteConfig.serviceTimes.map((time) => (
-            <li key={time}>{time}</li>
-          ))}
-        </ul>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
             href="/visit"
-            className="rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
+            className="rounded-lg bg-amber-400 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-amber-300"
           >
             Plan Your Visit
           </Link>
           <Link
-            href="/resources"
-            className="rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-100"
+            href="/contact"
+            className="rounded-lg border border-slate-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
           >
-            Message Resources
+            Submit a Prayer Request
           </Link>
         </div>
       </section>
 
       <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-        <h2 className="text-xl font-semibold text-slate-900">Current Message: Truth Matters</h2>
-        <p className="mt-3 text-slate-700">
-          Join us as we explore what truth really is and why it matters for everyday life. Through the resurrection of
-          Jesus, we are invited into a life transformed by the truth of the Gospel.
-        </p>
+        <h2 className="text-2xl font-semibold text-slate-900">Recent Sermons</h2>
+        <div className="mt-5 grid gap-5 md:grid-cols-2">
+          {recentMessages.map((message) => (
+            <article key={message.title} className="rounded-xl border border-slate-200 p-4">
+              <div className="aspect-video rounded-lg border border-dashed border-slate-300 bg-slate-100 p-4 text-sm text-slate-600">
+                YouTube embed placeholder for “{message.title}”
+              </div>
+              <h3 className="mt-3 text-lg font-semibold text-slate-900">{message.title}</h3>
+              <p className="text-sm text-slate-600">
+                Topic: {message.topic} • {message.date}
+              </p>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-        <h2 className="text-xl font-semibold text-slate-900">Communion</h2>
+        <h2 className="text-xl font-semibold text-slate-900">Topic Categories</h2>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {topics.map((topic) => (
+            <span key={topic} className="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
+              {topic}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+        <h2 className="text-xl font-semibold text-slate-900">Livestream Ready</h2>
         <p className="mt-3 text-slate-700">
-          We partake in communion on the first Sunday of each month as an act of worship and remembrance of Christ.
-          If you are joining online, prepare juice and bread or crackers before service.
+          This page is structured for future livestream integration so weekly broadcasts can be highlighted here.
         </p>
       </section>
     </div>
