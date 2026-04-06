@@ -49,15 +49,14 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center justify-center p-8 sm:p-12 lg:pl-0">
-              <div className="relative w-full max-w-md aspect-square lg:aspect-[4/5] overflow-hidden rounded-2xl shadow-sm ring-1 ring-slate-200">
-                <Image
-                  src="/hero-cross.jpg"
-                  alt="A cross with uplifting sun rays"
-                  fill
-                  className="object-cover object-center"
-                  priority
-                />
-              </div>
+              <Image
+                src="/hero-cross.jpg"
+                alt="A cross with uplifting sun rays"
+                width={1200}
+                height={800}
+                className="w-full max-w-md h-auto rounded-2xl shadow-sm ring-1 ring-slate-200"
+                priority
+              />
             </div>
           </div>
         </section>
