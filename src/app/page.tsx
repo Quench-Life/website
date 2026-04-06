@@ -12,36 +12,16 @@ export const metadata: Metadata = {
 
 const whatToExpect = [
   {
-    title: "Friendly People",
-    description: "You will be welcomed warmly from the moment you arrive.",
+    title: "Warm Welcome",
+    description: "Friendly hosts are ready to help from the moment you arrive.",
   },
   {
     title: "Powerful Worship",
-    description: "Spirit-led worship that points people to Jesus and freedom in Christ.",
+    description: "Spirit-led worship centered on Jesus and His presence.",
   },
   {
     title: "Bible Teaching",
-    description: "Practical, scripture-centered teaching you can apply this week.",
-  },
-  {
-    title: "Real Community",
-    description: "A church family where relationships are authentic and life-giving.",
-  },
-];
-
-const testimonials = [
-  {
-    quote:
-      "Quench Life has been a place of healing and growth for our family. We felt at home right away.",
-    name: "Young Family, Dublin",
-  },
-  {
-    quote: "The Sunday service has refreshed my faith and helped me reconnect with God.",
-    name: "Professional, Tri-Valley",
-  },
-  {
-    quote: "The teaching is clear, biblical, and full of hope. It changed how I live daily.",
-    name: "First-Time Visitor",
+    description: "Practical, scripture-based teaching you can apply right away.",
   },
 ];
 
@@ -66,26 +46,21 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="space-y-14">
+      <div className="space-y-12">
         <section className="overflow-hidden rounded-3xl bg-slate-950 text-white shadow-xl">
           <div className="grid gap-0 lg:grid-cols-2">
             <div className="p-8 sm:p-12 lg:pr-10">
+              <p className="text-sm font-semibold uppercase tracking-[0.15em] text-amber-200">You’re Invited</p>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
                 Find Living Water. Experience True Freedom.
               </h1>
               <p className="mt-5 text-lg leading-8 text-slate-200">{siteConfig.description}</p>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8">
                 <Link
                   href="/visit"
                   className="rounded-lg bg-amber-400 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-amber-300"
                 >
                   Plan Your Visit
-                </Link>
-                <Link
-                  href="/watch"
-                  className="rounded-lg border border-slate-500 bg-transparent px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
-                >
-                  Watch a Message
                 </Link>
               </div>
               <div className="mt-8 grid gap-3 text-sm sm:grid-cols-2">
@@ -95,7 +70,7 @@ export default function Home() {
                 </div>
                 <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-4">
                   <p className="font-semibold text-white">Location</p>
-                  <p className="mt-1 text-slate-300">{siteConfig.address.street}</p>
+                  <p className="mt-1 text-slate-300">{siteConfig.address.locationDetail}</p>
                 </div>
               </div>
             </div>
@@ -112,53 +87,39 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6 text-center shadow-sm">
-          <p className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
-            Come Be Refreshed. Come Be Filled. Come Be Transformed.
-          </p>
-        </section>
-
-        <section className="grid gap-6 lg:grid-cols-2">
-          <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-slate-600">Welcome from the Pastor</p>
-            <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900">We are glad you are here.</h2>
-            <p className="mt-4 leading-7 text-slate-700">
-              Whether you are new to church, returning to faith, or looking for deeper community, there is a place for
-              you at Quench Life Christian Fellowship. We are committed to helping you encounter Jesus and walk in
-              freedom.
-            </p>
-            <p className="mt-4 font-semibold text-slate-900">— Pastor Robert L. Scott Jr.</p>
-          </article>
+        <section className="grid gap-6 lg:grid-cols-[1fr_1.1fr]">
           <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
             <h2 className="text-2xl font-bold tracking-tight text-slate-900">Service Time + Location</h2>
             <p className="mt-3 text-slate-700">
-              Join us every Sunday at 11:00 AM at {siteConfig.address.street}, {siteConfig.address.city}, CA.
+              Join us Sundays at 11:00 AM at {siteConfig.address.street}, {siteConfig.address.city}, CA.
             </p>
             <ul className="mt-4 space-y-2 text-sm text-slate-700">
               <li>• Floor 2 · Luso-American Financial</li>
-              <li>• Easy parking nearby</li>
-              <li>• Friendly hosts ready to help</li>
+              <li>• Free nearby parking</li>
+              <li>• Family-friendly environment</li>
             </ul>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/visit"
-                className="rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
-              >
-                Plan Your Visit
-              </Link>
-              <Link
-                href="/contact"
-                className="rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-100"
-              >
-                Get Directions
-              </Link>
+            <Link
+              href="/contact"
+              className="mt-5 inline-block text-sm font-semibold text-slate-900 underline-offset-4 hover:underline"
+            >
+              Need directions? Contact us →
+            </Link>
+          </article>
+          <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="overflow-hidden rounded-xl border border-slate-200">
+              <iframe
+                title="Map to Quench Life Christian Fellowship"
+                src="https://www.google.com/maps?q=7080%20Donlon%20Way%20Suite%20217%20Dublin%20CA%2094568&output=embed"
+                loading="lazy"
+                className="h-80 w-full"
+              />
             </div>
           </article>
         </section>
 
         <section className="space-y-6">
           <h2 className="text-3xl font-bold tracking-tight text-slate-900">What to Expect</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-3">
             {whatToExpect.map((item) => (
               <article key={item.title} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
                 <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
@@ -168,80 +129,17 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="space-y-6">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900">Stories of Transformation</h2>
-          <div className="grid gap-6 md:grid-cols-3">
-            {testimonials.map((testimonial) => (
-              <blockquote key={testimonial.name} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-                <p className="leading-7 text-slate-700">“{testimonial.quote}”</p>
-                <footer className="mt-4 text-sm font-semibold text-slate-900">{testimonial.name}</footer>
-              </blockquote>
-            ))}
-          </div>
-        </section>
-
-        <section className="grid gap-6 lg:grid-cols-2">
-          <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900">Invitation to Visit</h2>
-            <p className="mt-3 leading-7 text-slate-700">
-              Your next step is simple. Plan your visit and we will make sure your first Sunday feels easy,
-              welcoming, and meaningful.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/visit"
-                className="rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
-              >
-                Plan Your Visit
-              </Link>
-              <Link
-                href="/ministries"
-                className="rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-100"
-              >
-                Join a Small Group
-              </Link>
-            </div>
-          </article>
-          <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900">Start Your Next Step</h2>
-            <ul className="mt-4 space-y-3 text-slate-700">
-              <li>1. Plan your visit</li>
-              <li>2. Attend Sunday service</li>
-              <li>3. Join a ministry or small group</li>
-              <li>4. Submit a prayer request</li>
-              <li>5. Support the mission through giving</li>
-            </ul>
-          </article>
-        </section>
-
-        <section className="rounded-2xl bg-slate-900 p-8 text-white shadow-sm sm:p-10">
-          <h2 className="text-3xl font-bold tracking-tight">Give with Confidence</h2>
-          <p className="mt-3 max-w-3xl text-slate-200">
-            Your generosity helps us reach people with the Gospel, disciple believers, and serve our local community.
-            Giving is secure, simple, and impactful.
-          </p>
-          <Link
-            href="/give"
-            className="mt-6 inline-block rounded-lg bg-amber-400 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-amber-300"
-          >
-            Give Online
-          </Link>
-        </section>
-
         <section className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
           <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900">Find Us in Dublin, California</h2>
+            <h2 className="text-2xl font-bold tracking-tight text-slate-900">New Here?</h2>
             <p className="mt-3 text-slate-700">
-              {siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.region} {siteConfig.address.postalCode}
+              Your next step is simple. Plan your visit and we’ll make sure your first Sunday is easy and meaningful.
             </p>
-            <div className="mt-5 overflow-hidden rounded-xl border border-slate-200">
-              <iframe
-                title="Map to Quench Life Christian Fellowship"
-                src="https://www.google.com/maps?q=7080%20Donlon%20Way%20Suite%20217%20Dublin%20CA%2094568&output=embed"
-                loading="lazy"
-                className="h-72 w-full"
-              />
-            </div>
+            <ul className="mt-4 space-y-2 text-sm text-slate-700">
+              <li>1. Plan your visit</li>
+              <li>2. Attend Sunday service at 11:00 AM</li>
+              <li>3. Meet people and take your next step</li>
+            </ul>
           </article>
           <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
             <h2 className="text-2xl font-bold tracking-tight text-slate-900">Stay Connected</h2>
@@ -258,29 +156,6 @@ export default function Home() {
               Need prayer? Submit a prayer request →
             </Link>
           </article>
-        </section>
-
-        <section className="grid gap-6 md:grid-cols-3">
-          <Link href="/visit" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:bg-slate-100">
-            <h2 className="text-lg font-semibold text-slate-900">Plan Your Visit</h2>
-            <p className="mt-2 text-sm leading-6 text-slate-700">Let us know you’re coming and we’ll help you feel at home.</p>
-          </Link>
-          <Link
-            href="/watch"
-            className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:bg-slate-100"
-          >
-            <h2 className="text-lg font-semibold text-slate-900">Watch a Message</h2>
-            <p className="mt-2 text-sm leading-6 text-slate-700">Explore faith, freedom, healing, and purpose in Christ.</p>
-          </Link>
-          <Link
-            href="/ministries"
-            className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:bg-slate-100"
-          >
-            <h2 className="text-lg font-semibold text-slate-900">Join a Ministry</h2>
-            <p className="mt-2 text-sm leading-6 text-slate-700">
-              Small groups, prayer ministry, outreach, youth, and serving opportunities.
-            </p>
-          </Link>
         </section>
       </div>
     </>
