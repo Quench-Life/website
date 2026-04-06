@@ -53,7 +53,7 @@ export default function Home() {
                 src="/hero-cross.jpg"
                 alt="A cross with uplifting sun rays"
                 fill
-                className="object-cover"
+                className="object-cover object-right"
                 priority
               />
             </div>
