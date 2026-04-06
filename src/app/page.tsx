@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import WelcomeMessage from "@/content/welcome-message.mdx";
 import { siteConfig } from "@/lib/site";
 
@@ -24,25 +25,38 @@ export default function Home() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="space-y-14">
-        <section className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200 sm:p-12">
-          <p className="text-sm font-semibold uppercase tracking-[0.15em] text-cyan-700">Welcome Home</p>
-          <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-            A simple place to find hope, faith, and community in Jesus.
-          </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-700">{siteConfig.description}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/visit"
-              className="rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
-            >
-              Plan Your Visit
-            </Link>
-            <Link
-              href="/events"
-              className="rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-100"
-            >
-              Events & Ministries
-            </Link>
+        <section className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+          <div className="grid lg:grid-cols-2">
+            <div className="p-8 sm:p-12 lg:pr-8 flex flex-col justify-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.15em] text-cyan-700">Welcome Home</p>
+              <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+                A simple place to find hope, faith, and community in Jesus.
+              </h1>
+              <p className="mt-5 text-lg leading-8 text-slate-700">{siteConfig.description}</p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link
+                  href="/visit"
+                  className="rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
+                >
+                  Plan Your Visit
+                </Link>
+                <Link
+                  href="/events"
+                  className="rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-100"
+                >
+                  Events & Ministries
+                </Link>
+              </div>
+            </div>
+            <div className="relative min-h-[300px] lg:min-h-[500px]">
+              <Image
+                src="/hero-community.jpg"
+                alt="A diverse group of people gathering together in community"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
         </section>
 
