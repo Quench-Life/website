@@ -17,9 +17,6 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold tracking-tight text-slate-900">
           <span>{siteConfig.shortName}</span>
-          <span className="hidden rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-800 sm:inline">
-            ★ {siteConfig.rating.toFixed(1)}
-          </span>
         </Link>
         <nav className="hidden items-center gap-5 text-sm font-medium text-slate-700 lg:flex">
           {navItems.map((item) => (

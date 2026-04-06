@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Give",
-  description: "Give securely at Quench Life Christian Fellowship with recurring or one-time options.",
+  description: "Give online, with Zelle, in person, or by mail at Quench Life Christian Fellowship.",
 };
 
 export default function GivePage() {
@@ -26,32 +26,32 @@ export default function GivePage() {
 
       <section className="grid gap-6 md:grid-cols-2">
         <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-semibold text-slate-900">Recurring Giving</h2>
+          <h2 className="text-xl font-semibold text-slate-900">Give Online</h2>
           <p className="mt-3 text-sm text-slate-700">
-            Set up an automated recurring gift to support consistent ministry impact.
+            Make your gift securely through our online giving platform.
           </p>
           <a
-            href="https://www.quenchlife.org/giving"
+            href="https://giving.myamplify.io/app/giving/Quen6937408"
             target="_blank"
             rel="noreferrer"
             className="mt-5 inline-block rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700"
           >
-            Start Recurring Giving
+            Give Online
           </a>
         </article>
 
         <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-semibold text-slate-900">One-Time Gift</h2>
+          <h2 className="text-xl font-semibold text-slate-900">Donate with Zelle</h2>
           <p className="mt-3 text-sm text-slate-700">
-            Make a one-time gift quickly and securely through our online giving page.
+            Use Zelle to give quickly from your bank app.
           </p>
           <a
-            href="https://www.quenchlife.org/giving"
+            href="https://www.zelle.com/get-started"
             target="_blank"
             rel="noreferrer"
             className="mt-5 inline-block rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 transition hover:bg-slate-100"
           >
-            Give One-Time
+            Donate with Zelle
           </a>
         </article>
       </section>
@@ -59,10 +59,12 @@ export default function GivePage() {
       <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
         <h2 className="text-xl font-semibold text-slate-900">Secure Giving Options</h2>
         <ul className="mt-4 space-y-2 text-sm text-slate-700">
-          <li>• Online giving (encrypted provider)</li>
-          <li>• Zelle: QuenchLife@gmail.com</li>
-          <li>• In-person offering during Wednesday service</li>
-          <li>• Mail: P.O. Box 2934, Dublin, CA 94568</li>
+          <li>• Give online using the secure link above.</li>
+          <li>• Donate with Zelle using the link above.</li>
+          <li>• Give in person during Sunday service at 11:00 AM.</li>
+          <li>• Give by mail: Send checks or money orders to:</li>
+          <li className="pl-4">Quench Life Christian Fellowship</li>
+          <li className="pl-4">P.O. Box 2934, Dublin, CA 94568</li>
         </ul>
       </section>
     </div>

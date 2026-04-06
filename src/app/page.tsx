@@ -36,7 +36,7 @@ const testimonials = [
     name: "Young Family, Dublin",
   },
   {
-    quote: "The Wednesday service has refreshed my faith and helped me reconnect with God.",
+    quote: "The Sunday service has refreshed my faith and helped me reconnect with God.",
     name: "Professional, Tri-Valley",
   },
   {
@@ -61,12 +61,6 @@ export default function Home() {
       postalCode: siteConfig.address.postalCode,
     },
     url: siteConfig.url,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: siteConfig.rating.toFixed(1),
-      bestRating: "5",
-      ratingCount: "1",
-    },
   };
 
   return (
@@ -76,10 +70,7 @@ export default function Home() {
         <section className="overflow-hidden rounded-3xl bg-slate-950 text-white shadow-xl">
           <div className="grid gap-0 lg:grid-cols-2">
             <div className="p-8 sm:p-12 lg:pr-10">
-              <p className="inline-flex rounded-full bg-amber-400/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-amber-200">
-                ★ 5.0 Rated Local Church in Dublin
-              </p>
-              <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
                 Find Living Water. Experience True Freedom.
               </h1>
               <p className="mt-5 text-lg leading-8 text-slate-200">{siteConfig.description}</p>
@@ -100,7 +91,7 @@ export default function Home() {
               <div className="mt-8 grid gap-3 text-sm sm:grid-cols-2">
                 <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-4">
                   <p className="font-semibold text-white">Service Time</p>
-                  <p className="mt-1 text-slate-300">Wednesdays at 7:30 PM</p>
+                  <p className="mt-1 text-slate-300">Sundays at 11:00 AM</p>
                 </div>
                 <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-4">
                   <p className="font-semibold text-white">Location</p>
@@ -141,10 +132,10 @@ export default function Home() {
           <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
             <h2 className="text-2xl font-bold tracking-tight text-slate-900">Service Time + Location</h2>
             <p className="mt-3 text-slate-700">
-              Join us every Wednesday at 7:30 PM at {siteConfig.address.street}, {siteConfig.address.city}, CA.
+              Join us every Sunday at 11:00 AM at {siteConfig.address.street}, {siteConfig.address.city}, CA.
             </p>
             <ul className="mt-4 space-y-2 text-sm text-slate-700">
-              <li>• Floor 1 · Luso-American Financial</li>
+              <li>• Floor 2 · Luso-American Financial</li>
               <li>• Easy parking nearby</li>
               <li>• Friendly hosts ready to help</li>
             </ul>
@@ -193,7 +184,7 @@ export default function Home() {
           <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
             <h2 className="text-2xl font-bold tracking-tight text-slate-900">Invitation to Visit</h2>
             <p className="mt-3 leading-7 text-slate-700">
-              Your next step is simple. Plan your visit and we will make sure your first Wednesday feels easy,
+              Your next step is simple. Plan your visit and we will make sure your first Sunday feels easy,
               welcoming, and meaningful.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
@@ -215,7 +206,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold tracking-tight text-slate-900">Start Your Next Step</h2>
             <ul className="mt-4 space-y-3 text-slate-700">
               <li>1. Plan your visit</li>
-              <li>2. Attend Wednesday service</li>
+              <li>2. Attend Sunday service</li>
               <li>3. Join a ministry or small group</li>
               <li>4. Submit a prayer request</li>
               <li>5. Support the mission through giving</li>

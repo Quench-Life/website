@@ -6,15 +6,14 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://quenchlife.org",
   phone: "(925) 549-4054",
   email: "hello@quenchlife.org",
-  rating: 5.0,
   address: {
     street: "7080 Donlon Way Suite 217",
     city: "Dublin",
     region: "CA",
     postalCode: "94568",
-    locationDetail: "Floor 1 · Luso-American Financial",
+    locationDetail: "Floor 2 · Luso-American Financial",
   },
-  serviceTimes: ["Wednesday Service — 7:30 PM"],
+  serviceTimes: ["Sunday Service — 11:00 AM"],
   weeklyConnections: [
     "Bible Life Group — Wednesdays, 7:30 PM (Zoom)",
     "Prayer Ministry — Sundays, 8:00 AM (Online)",
@@ -25,7 +24,7 @@ export const siteConfig = {
   seoKeywords: [
     "Christian Church in Dublin CA",
     "Church near me Dublin",
-    "Wednesday night church Dublin",
+    "Sunday church Dublin 11 AM",
   ],
   socialLinks: {
     youtube: "https://www.youtube.com/@quenchlife",

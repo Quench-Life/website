@@ -30,7 +30,7 @@ export default function ContactPage() {
             <p>{siteConfig.phone}</p>
             <p>{siteConfig.email}</p>
           </div>
-          <p className="mt-5 text-sm text-slate-600">Service Time: Wednesdays at 7:30 PM</p>
+          <p className="mt-5 text-sm text-slate-600">Service Time: Sundays at 11:00 AM</p>
           <div className="mt-5 overflow-hidden rounded-xl border border-slate-200">
             <iframe
               title="Quench Life Christian Fellowship location"

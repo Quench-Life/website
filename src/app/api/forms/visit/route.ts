@@ -28,6 +28,6 @@ export async function POST(request: Request) {
   }
 
   return NextResponse.json({
-    message: `Thanks, ${name}. We’re excited to welcome you this Wednesday at 7:30 PM.`,
+    message: `Thanks, ${name}. We’re excited to welcome you this Sunday at 11:00 AM.`,
   });
 }

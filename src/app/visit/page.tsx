@@ -24,7 +24,7 @@ export default function VisitPage() {
           <h2 className="text-xl font-semibold text-slate-900">What happens when I arrive?</h2>
           <ul className="mt-4 space-y-3 text-slate-700">
             <li>• Friendly hosts will greet you and help you get settled.</li>
-            <li>• Service begins at 7:30 PM with worship and biblical teaching.</li>
+            <li>• Sunday service begins at 11:00 AM with worship and biblical teaching.</li>
             <li>• After service, connect with leaders and learn your next steps.</li>
           </ul>
         </article>

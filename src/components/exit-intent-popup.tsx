@@ -34,7 +34,7 @@ export function ExitIntentPopup() {
         <p className="text-sm font-semibold uppercase tracking-[0.15em] text-amber-700">New Here?</p>
         <h2 className="mt-2 text-2xl font-bold text-slate-900">We’d Love to Meet You</h2>
         <p className="mt-3 text-slate-700">
-          Join us this Wednesday at 7:30 PM and discover a welcoming church family in Dublin.
+          Join us this Sunday at 11:00 AM and discover a welcoming church family in Dublin.
         </p>
         <div className="mt-5 flex flex-wrap gap-3">
           <Link

@@ -14,9 +14,6 @@ export function SiteFooter() {
           </p>
           <p>{siteConfig.phone}</p>
           <p>{siteConfig.email}</p>
-          <p className="rounded-full bg-amber-400/20 px-3 py-1 text-xs font-semibold text-amber-200 inline-block">
-            Google Rating: ★ {siteConfig.rating.toFixed(1)}
-          </p>
         </div>
 
         <div className="space-y-3 text-sm">
