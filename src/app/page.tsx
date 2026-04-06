@@ -94,7 +94,7 @@ export default function Home() {
               Join us Sundays at 11:00 AM at {siteConfig.address.street}, {siteConfig.address.city}, CA.
             </p>
             <ul className="mt-4 space-y-2 text-sm text-slate-700">
-              <li>• Floor 2 · Luso-American Financial</li>
+              <li>• Floor 2</li>
               <li>• Free nearby parking</li>
               <li>• Family-friendly environment</li>
             </ul>

@@ -11,7 +11,7 @@ export const siteConfig = {
     city: "Dublin",
     region: "CA",
     postalCode: "94568",
-    locationDetail: "Floor 2 · Luso-American Financial",
+    locationDetail: "Floor 2",
   },
   serviceTimes: ["Sunday Service — 11:00 AM"],
   weeklyConnections: [
@@ -27,7 +27,7 @@ export const siteConfig = {
     "Sunday church Dublin 11 AM",
   ],
   socialLinks: {
-    youtube: "https://www.youtube.com/@quenchlife",
+    youtube: "https://www.youtube.com/@quenchlifechristianfellowship",
     instagram: "https://www.instagram.com/",
     facebook: "https://www.facebook.com/",
   },
