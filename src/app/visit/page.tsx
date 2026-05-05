@@ -127,8 +127,12 @@ export default function VisitPage() {
       <section className="rounded-3xl border border-blue-200 bg-blue-50/50 p-6 shadow-sm sm:p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Current Message Series</p>
         <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">The Book of Hebrews</h2>
-        <div className="mt-4 overflow-hidden rounded-2xl border border-blue-200 bg-white">
-          <Image src={hebrewsSeriesImage} alt="Current Message Series: The Book of Hebrews" className="h-64 w-full object-cover" />
+        <div className="mt-4 overflow-hidden rounded-2xl border border-blue-200 bg-white p-2">
+          <Image
+            src={hebrewsSeriesImage}
+            alt="Current Message Series: The Book of Hebrews"
+            className="h-72 w-full object-contain"
+          />
         </div>
         <p className="mt-3 max-w-4xl text-slate-700">
           The Book of Hebrews reveals the supremacy of Jesus Christ and the power of God&apos;s Word in the life of every

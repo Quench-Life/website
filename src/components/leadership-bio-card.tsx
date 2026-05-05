@@ -22,8 +22,8 @@ export function LeadershipBioCard({ role, name, paragraphs, previewCount = 2, im
   return (
     <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
       {image ? (
-        <div className="mb-5 overflow-hidden rounded-xl border border-slate-200">
-          <Image src={image.src} alt={image.alt} className="h-64 w-full object-cover" />
+        <div className="mb-5 overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-2">
+          <Image src={image.src} alt={image.alt} className="h-72 w-full object-contain object-top" />
         </div>
       ) : null}
       <p className="text-sm font-semibold uppercase tracking-[0.14em] text-slate-600">{role}</p>
