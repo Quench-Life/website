@@ -16,10 +16,10 @@ export const siteConfig = {
   serviceTimes: ["Sunday Service — 11:00 AM"],
   weeklyConnections: [
     "Bible Life Group — Wednesdays, 7:30 PM (Zoom)",
-    "Prayer Ministry — Sundays, 8:00 AM (Online)",
-    "Outreach Team — 2nd Saturday monthly",
+    "Prayer Ministry — Mondays, 6:30-7:00 AM (Zoom)",
     "Women's Discipleship — 2nd & 4th Mondays, 7:30 PM (Zoom)",
     "Men's Discipleship — 1st, 3rd & 5th Saturdays, 9:00 AM (Zoom)",
+    "Podcast Ministry — Listen to messages and encouragement on demand",
   ],
   seoKeywords: [
     "Christian Church in Dublin CA",

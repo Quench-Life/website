@@ -9,9 +9,23 @@ export const metadata: Metadata = {
 
 const ministries = siteConfig.weeklyConnections.map((item) => {
   const [name, details] = item.split("—").map((part) => part.trim());
+  const cta =
+    name === "Bible Life Group"
+      ? { label: "Learn More", href: "/ministries/bible-life-group" }
+      : name === "Prayer Ministry"
+        ? { label: "I'm Interested", href: "/ministries/prayer-ministry" }
+        : name === "Women's Discipleship"
+          ? { label: "Learn More", href: "/ministries/womens-discipleship" }
+          : name === "Men's Discipleship"
+            ? { label: "Learn More", href: "/ministries/mens-discipleship" }
+            : name === "Podcast Ministry"
+              ? { label: "Listen In", href: "/ministries/podcast-ministry" }
+        : null;
+
   return {
     name,
     description: details ?? "",
+    cta,
   };
 });
 
@@ -31,6 +45,16 @@ export default function MinistriesPage() {
           <article key={ministry.name} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
             <h2 className="text-lg font-semibold text-slate-900">{ministry.name}</h2>
             <p className="mt-2 text-sm leading-6 text-slate-700">{ministry.description}</p>
+            {ministry.cta ? (
+              <div className="mt-4">
+                <Link
+                  href={ministry.cta.href}
+                  className="inline-flex rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700"
+                >
+                  {ministry.cta.label}
+                </Link>
+              </div>
+            ) : null}
           </article>
         ))}
       </section>
