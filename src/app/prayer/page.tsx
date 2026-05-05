@@ -22,7 +22,7 @@ export default function PrayerPage() {
         </p>
       </section>
 
-      <section className="relative min-h-[24rem] overflow-hidden rounded-2xl bg-slate-900 text-white shadow-sm">
+      <section className="relative min-h-[28rem] overflow-hidden rounded-2xl bg-slate-900 text-white shadow-sm">
         <Image src={sunrisePrayerImage} alt="Sunrise Prayer Call" fill className="object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/75 to-cyan-900/60" />
         <div className="relative flex h-full flex-col justify-end p-8 sm:p-10">
