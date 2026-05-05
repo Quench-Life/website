@@ -1,60 +1,42 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { NewsletterSignup } from "@/components/newsletter-signup";
+import { NextSundayWidget } from "@/components/next-sunday-widget";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Find Living Water. Experience True Freedom.",
-  description: siteConfig.description,
+  title: "Jesus Christ: The Water of Life.",
+  description: "Find rest for your soul and power for your life at Quench Life Dublin.",
   keywords: siteConfig.seoKeywords,
 };
 
-const whatToExpect = [
+const teachingCards = [
   {
-    title: "Warm Welcome",
-    description: "Friendly hosts are ready to help from the moment you arrive.",
+    title: "Jesus Christ: The Water of Life",
+    verse: "John 4:13-14",
+    description: "Come to the One who satisfies thirst forever and offers living water through the Gospel.",
   },
   {
-    title: "Powerful Worship",
-    description: "Spirit-led worship centered on Jesus and His presence.",
+    title: "Walk in the Spirit",
+    verse: "Galatians 5:16-25",
+    description: "Learn how life in Christ produces holiness, freedom, and the fruit of the Spirit.",
   },
   {
-    title: "Bible Teaching",
-    description: "Practical, scripture-based teaching you can apply right away.",
+    title: "Built on the Word",
+    verse: "2 Timothy 3:16-17",
+    description: "Be rooted in Scripture as the final authority for faith, discipleship, and mission.",
   },
 ];
 
-const hubLinks = [
+const beliefCards = [
   {
-    title: "Plan Your Visit",
-    description: "See what to expect on your first Sunday and let us know you're coming.",
-    href: "/visit",
+    title: "Jesus Is Lord",
+    scripture: "Philippians 2:9-11",
+    description: "We proclaim Jesus Christ as Lord over every life, every home, and every season.",
   },
   {
-    title: "Ministries",
-    description: "Find weekly connection points for prayer, discipleship, and community.",
-    href: "/ministries",
-  },
-  {
-    title: "Events",
-    description: "Stay current with upcoming gatherings, classes, and special services.",
-    href: "/events",
-  },
-  {
-    title: "Prayer",
-    description: "Share a request or join us in standing together in faith.",
-    href: "/prayer",
-  },
-  {
-    title: "Give",
-    description: "Support the mission of Quench Life through secure online giving.",
-    href: "/give",
-  },
-  {
-    title: "Contact",
-    description: "Need help or directions? Reach out and our team will follow up.",
-    href: "/contact",
+    title: "Scripture Is Authority",
+    scripture: "2 Timothy 3:16-17",
+    description: "The Bible is God-breathed, trustworthy, and our foundation for truth and discipleship.",
   },
 ];
 
@@ -80,88 +62,142 @@ export default function Home() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="space-y-12">
-        <section className="overflow-hidden rounded-3xl bg-slate-950 text-white shadow-xl">
-          <div className="grid gap-0 lg:grid-cols-2">
-            <div className="p-8 sm:p-12 lg:pr-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.15em] text-amber-200">You’re Invited</p>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-                Find Living Water. Experience True Freedom.
-              </h1>
-              <p className="mt-5 text-lg leading-8 text-slate-200">{siteConfig.description}</p>
-              <div className="mt-8">
-                <Link
-                  href="/visit"
-                  className="rounded-lg bg-amber-400 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-amber-300"
-                >
-                  Plan Your Visit
-                </Link>
-              </div>
-              <div className="mt-8 grid gap-3 text-sm sm:grid-cols-2">
-                <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-4">
-                  <p className="font-semibold text-white">Service Time</p>
-                  <p className="mt-1 text-slate-300">Sundays at 11:00 AM</p>
-                </div>
-                <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-4">
-                  <p className="font-semibold text-white">Location</p>
-                  <p className="mt-1 text-slate-300">{siteConfig.address.locationDetail}</p>
-                </div>
-              </div>
+        <section className="relative overflow-hidden rounded-3xl bg-blue-950 text-white shadow-2xl">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1800&q=80')",
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-950/95 via-blue-900/90 to-blue-700/75" />
+          <div className="absolute -bottom-24 left-0 right-0 h-56 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.28),transparent_70%)]" />
+
+          <div className="relative p-8 sm:p-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-200">Quench Life Dublin</p>
+            <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight sm:text-6xl">Jesus Christ: The Water of Life.</h1>
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-blue-100">
+              Find rest for your soul and power for your life at Quench Life Dublin.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/visit"
+                className="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-blue-900 transition hover:bg-blue-50"
+              >
+                Plan Your Visit
+              </Link>
+              <Link
+                href="/our-beliefs"
+                className="rounded-xl border border-blue-200/60 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/20"
+              >
+                Our Beliefs
+              </Link>
             </div>
-            <div className="flex items-center justify-center bg-slate-900/40 p-8 sm:p-12">
-              <Image
-                src="/hero-cross.jpg"
-                alt="A cross with uplifting sun rays"
-                width={1200}
-                height={800}
-                className="h-auto w-full max-w-md rounded-2xl shadow-2xl ring-1 ring-slate-700"
-                priority
-              />
+            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              <div className="rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-md">
+                <p className="text-sm font-semibold text-white">Sunday Gathering</p>
+                <p className="mt-1 text-sm text-blue-100">11:00 AM · Centered on the Gospel and prayer</p>
+              </div>
+              <div className="rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-md">
+                <p className="text-sm font-semibold text-white">Dublin, CA</p>
+                <p className="mt-1 text-sm text-blue-100">7080 Donlon Way, Ste 217 · Serving the Bay Area</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="space-y-6 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+        <section className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+          <NextSundayWidget />
+          <article className="overflow-hidden rounded-3xl border border-blue-200 bg-white shadow-sm">
+            <div
+              className="h-full min-h-72 bg-cover bg-center"
+              style={{
+                backgroundImage:
+                  "url('https://images.unsplash.com/photo-1451340770902-e4a68e27c470?auto=format&fit=crop&w=1200&q=80')",
+              }}
+            >
+              <div className="h-full bg-gradient-to-t from-blue-950/85 to-blue-900/20 p-6 text-white">
+                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-blue-200">Serving our neighbors</p>
+                <h2 className="mt-3 text-2xl font-bold">Bay Area Clarity & Care</h2>
+                <p className="mt-3 max-w-sm text-blue-100">
+                  We make it simple to know exactly where to come and what to expect each Sunday.
+                </p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section className="space-y-6 rounded-3xl border border-blue-200 bg-white p-8 shadow-sm">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-slate-500">Explore</p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">Your next step hub</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-blue-700">Word of God</p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">Current Teaching</h2>
             <p className="mt-3 max-w-3xl text-slate-700">
-              Everything you need in one place to get connected at Quench Life.
+              Bold, biblical teaching centered on the finished work and present Lordship of Jesus Christ.
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {hubLinks.map((item) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="group rounded-xl border border-slate-200 bg-slate-50 p-5 transition hover:border-slate-300 hover:bg-white"
-              >
-                <h3 className="text-base font-semibold text-slate-900 group-hover:underline">{item.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-700">{item.description}</p>
-              </Link>
+          <div className="grid gap-4 md:grid-cols-3">
+            {teachingCards.map((card) => (
+              <article key={card.title} className="rounded-2xl border border-blue-100 bg-blue-50/60 p-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue-700">{card.verse}</p>
+                <h3 className="mt-2 text-xl font-bold text-slate-900">{card.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-700">{card.description}</p>
+              </article>
             ))}
           </div>
         </section>
 
+        <section className="rounded-3xl border border-blue-200 bg-gradient-to-r from-blue-900 to-blue-700 p-8 text-white shadow-xl sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.15em] text-blue-200">Scriptural Foundation</p>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight">Our Beliefs</h2>
+          <p className="mt-4 max-w-3xl text-blue-100">
+            We are unapologetically centered on Jesus Christ, submitted to His Word, and committed to making disciples.
+          </p>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            {beliefCards.map((belief) => (
+              <article key={belief.title} className="rounded-2xl border border-blue-200/50 bg-white/10 p-5 backdrop-blur-sm">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue-100">{belief.scripture}</p>
+                <h3 className="mt-2 text-xl font-bold">{belief.title}</h3>
+                <p className="mt-2 text-sm text-blue-100">{belief.description}</p>
+              </article>
+            ))}
+          </div>
+          <Link
+            href="/our-beliefs"
+            className="mt-6 inline-block rounded-xl bg-white px-5 py-3 text-sm font-semibold text-blue-900 transition hover:bg-blue-50"
+          >
+            Read Our Beliefs
+          </Link>
+        </section>
+
         <section className="grid gap-6 lg:grid-cols-[1fr_1.1fr]">
-          <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900">Service Time + Location</h2>
-            <p className="mt-3 text-slate-700">
-              Join us Sundays at 11:00 AM at {siteConfig.address.street}, {siteConfig.address.city}, CA.
+          <article className="rounded-3xl border border-blue-200 bg-white p-8 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-blue-700">Invitation to Christ</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900">New to Faith? Meet Jesus.</h2>
+            <p className="mt-4 text-slate-700">
+              If you are searching for truth, peace, or a new beginning, we would love to walk with you through the Gospel.
             </p>
             <ul className="mt-4 space-y-2 text-sm text-slate-700">
-              <li>• Floor 2</li>
-              <li>• Free nearby parking</li>
-              <li>• Family-friendly environment</li>
+              <li>• Learn what it means to follow Jesus Christ</li>
+              <li>• Request prayer from our church family</li>
+              <li>• Talk with a pastor about next steps in faith</li>
             </ul>
-            <Link
-              href="/contact"
-              className="mt-5 inline-block text-sm font-semibold text-slate-900 underline-offset-4 hover:underline"
-            >
-              Need directions? Contact us →
-            </Link>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href="/our-beliefs"
+                className="rounded-xl bg-blue-800 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+              >
+                Learn the Gospel
+              </Link>
+              <Link
+                href="/prayer"
+                className="rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-100"
+              >
+                Request Prayer
+              </Link>
+            </div>
           </article>
-          <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-            <div className="overflow-hidden rounded-xl border border-slate-200">
+          <article className="rounded-3xl border border-blue-200 bg-white p-6 shadow-sm">
+            <div className="overflow-hidden rounded-2xl border border-blue-100">
               <iframe
                 title="Map to Quench Life Christian Fellowship"
                 src="https://www.google.com/maps?q=7080%20Donlon%20Way%20Suite%20217%20Dublin%20CA%2094568&output=embed"
@@ -169,46 +205,11 @@ export default function Home() {
                 className="h-80 w-full"
               />
             </div>
-          </article>
-        </section>
-
-        <section className="space-y-6">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900">What to Expect</h2>
-          <div className="grid gap-6 md:grid-cols-3">
-            {whatToExpect.map((item) => (
-              <article key={item.title} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-700">{item.description}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-          <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900">New Here?</h2>
-            <p className="mt-3 text-slate-700">
-              Your next step is simple. Plan your visit and we’ll make sure your first Sunday is easy and meaningful.
-            </p>
-            <ul className="mt-4 space-y-2 text-sm text-slate-700">
-              <li>1. Plan your visit</li>
-              <li>2. Attend Sunday service at 11:00 AM</li>
-              <li>3. Meet people and take your next step</li>
-            </ul>
-          </article>
-          <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900">Stay Connected</h2>
-            <p className="mt-3 text-slate-700">
-              Get updates on messages, ministries, and events. No spam, just encouragement and next steps.
-            </p>
-            <div className="mt-5">
-              <NewsletterSignup />
-            </div>
             <Link
-              href="/contact"
-              className="mt-6 inline-block text-sm font-semibold text-slate-900 underline-offset-4 hover:underline"
+              href="/visit"
+              className="mt-5 inline-block text-sm font-semibold text-blue-800 underline-offset-4 hover:underline"
             >
-              Need prayer? Submit a prayer request →
+              Get directions and plan your first Sunday →
             </Link>
           </article>
         </section>

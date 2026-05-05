@@ -42,17 +42,15 @@ export function SiteFooter() {
           </a>
         </div>
 
-        <div className="space-y-3">
-          <p className="font-semibold text-white">Find Us</p>
-          <div className="overflow-hidden rounded-xl border border-slate-700">
-            <iframe
-              title="Quench Life Christian Fellowship map"
-              src="https://www.google.com/maps?q=7080%20Donlon%20Way%20Suite%20217%20Dublin%20CA%2094568&output=embed"
-              loading="lazy"
-              className="h-56 w-full"
-            />
-          </div>
-          <p className="text-xs text-slate-400">© {new Date().getFullYear()} {siteConfig.shortName}</p>
+        <div className="space-y-3 text-sm">
+          <p className="font-semibold text-white">Worship With Us</p>
+          <p>Sundays at 11:00 AM</p>
+          <p>1st & 3rd Sundays are in-person at Ste 217.</p>
+          <p>Other Sundays are online worship.</p>
+          <Link href="/visit" className="inline-block pt-1 font-semibold text-white underline-offset-4 hover:underline">
+            Plan your visit →
+          </Link>
+          <p className="pt-2 text-xs text-slate-400">© {new Date().getFullYear()} {siteConfig.shortName}</p>
         </div>
       </div>
     </footer>
