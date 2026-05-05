@@ -17,8 +17,7 @@ export function PlanVisitForm() {
     const payload = {
       name: formData.get("name"),
       email: formData.get("email"),
-      phone: formData.get("phone"),
-      heardAbout: formData.get("heardAbout"),
+      guests: formData.get("guests"),
     };
 
     try {
@@ -72,34 +71,27 @@ export function PlanVisitForm() {
         />
       </div>
       <div>
-        <label htmlFor="visit-phone" className="text-sm font-medium text-slate-700">
-          Phone
+        <label htmlFor="visit-guests" className="text-sm font-medium text-slate-700">
+          Number of Guests
         </label>
         <input
-          id="visit-phone"
-          name="phone"
-          type="tel"
-          autoComplete="tel"
-          className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 shadow-sm outline-none transition focus:border-slate-900"
-        />
-      </div>
-      <div>
-        <label htmlFor="visit-hear" className="text-sm font-medium text-slate-700">
-          How did you hear about us?
-        </label>
-        <input
-          id="visit-hear"
-          name="heardAbout"
+          id="visit-guests"
+          name="guests"
+          type="number"
+          min={1}
+          max={25}
           required
+          inputMode="numeric"
+          defaultValue={1}
           className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 shadow-sm outline-none transition focus:border-slate-900"
         />
       </div>
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-70"
+        className="w-full rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-70"
       >
-        {status === "submitting" ? "Submitting..." : "Let Us Know You’re Coming"}
+        {status === "submitting" ? "Submitting..." : "Plan Your Visit"}
       </button>
       {message ? (
         <p className={`text-sm ${status === "success" ? "text-emerald-700" : "text-rose-700"}`} aria-live="polite">
