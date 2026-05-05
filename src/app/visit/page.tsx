@@ -127,7 +127,7 @@ export default function VisitPage() {
       <section className="relative min-h-[34rem] overflow-hidden rounded-3xl bg-blue-950 text-white shadow-sm sm:min-h-[38rem]">
         <Image src={hebrewsSeriesImage} alt="Current Message Series: The Book of Hebrews" fill className="object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-blue-950/80 to-blue-900/65" />
-        <div className="relative flex h-full flex-col justify-end p-6 sm:p-8">
+        <div className="absolute inset-0 z-10 flex flex-col justify-end p-6 sm:p-8">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-200">Current Message Series</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight">The Book of Hebrews</h2>
           <p className="mt-3 max-w-4xl text-slate-100">
