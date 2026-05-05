@@ -34,10 +34,10 @@ const platforms = [
 export default function PodcastMinistryPage() {
   return (
     <div className="space-y-8">
-      <section className="relative overflow-hidden rounded-2xl bg-slate-900 text-white shadow-sm">
+      <section className="relative min-h-[28rem] overflow-hidden rounded-2xl bg-slate-900 text-white shadow-sm">
         <Image src={podcastLogo} alt="Podcast ministry artwork" fill className="object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/85 to-cyan-900/70" />
-        <div className="relative p-8 sm:p-10">
+        <div className="relative flex h-full flex-col justify-end p-8 sm:p-10">
           <p className="text-sm font-semibold uppercase tracking-[0.15em] text-cyan-200">Listen</p>
           <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Sermons and teaching</h1>
           <p className="mt-4 max-w-2xl text-slate-200">
@@ -61,6 +61,9 @@ export default function PodcastMinistryPage() {
 
       <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
         <h2 className="text-xl font-semibold text-slate-900">Listen on your preferred platform</h2>
+        <p className="mt-3 text-slate-700">
+          Looking for more episodes? Find us on your favorite podcast platforms.
+        </p>
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {platforms.map(({ name, href, Icon }) => (
             <a
@@ -79,10 +82,16 @@ export default function PodcastMinistryPage() {
 
       <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
         <h2 className="text-xl font-semibold text-slate-900">Radio Broadcast</h2>
-        <ul className="mt-3 space-y-2 text-slate-700">
-          <li>Gospel 1190 AM - The Light: Sundays at 11:30 AM</li>
-          <li>KFAX AM 1100: Sundays at 6:30 PM</li>
-        </ul>
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
+          <article className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <h3 className="text-base font-semibold text-slate-900">Gospel 1190 AM</h3>
+            <p className="mt-2 text-sm text-slate-700">The Light: Sundays at 11:30 AM</p>
+          </article>
+          <article className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <h3 className="text-base font-semibold text-slate-900">KFAX AM 1100</h3>
+            <p className="mt-2 text-sm text-slate-700">Sundays at 6:30 PM</p>
+          </article>
+        </div>
       </section>
     </div>
   );
