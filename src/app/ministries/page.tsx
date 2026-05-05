@@ -1,43 +1,28 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Ministries",
-  description: "Discover ministries at Quench Life Christian Fellowship: small groups, prayer, outreach, youth, and serving.",
+  description: "Discover weekly ministries and connection points at Quench Life Christian Fellowship.",
 };
 
-const ministries = [
-  {
-    name: "Small Groups",
-    description: "Build meaningful relationships and grow in God’s Word throughout the week.",
-  },
-  {
-    name: "Prayer Ministry",
-    description: "Stand in faith for families, the church, and the city through intentional prayer.",
-  },
-  {
-    name: "Outreach",
-    description: "Serve the local community with practical love and Gospel-centered compassion.",
-  },
-  {
-    name: "Youth / Young Adults",
-    description: "A place for the next generation to find identity, purpose, and spiritual community.",
-  },
-  {
-    name: "Volunteer Teams",
-    description: "Use your gifts in hospitality, media, worship support, and care ministries.",
-  },
-];
+const ministries = siteConfig.weeklyConnections.map((item) => {
+  const [name, details] = item.split("—").map((part) => part.trim());
+  return {
+    name,
+    description: details ?? "",
+  };
+});
 
 export default function MinistriesPage() {
   return (
     <div className="space-y-8">
       <section className="rounded-2xl bg-slate-900 p-8 text-white shadow-sm sm:p-10">
         <p className="text-sm font-semibold uppercase tracking-[0.15em] text-amber-200">Ministries</p>
-        <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Find your place to grow and serve</h1>
+        <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Find your place to connect and grow</h1>
         <p className="mt-4 max-w-3xl text-slate-200">
-          Church is more than a service. It is a community where people pray together, learn together, and serve
-          together.
+          These ministries come directly from our Connect page so you can quickly see where to plug in this week.
         </p>
       </section>
 

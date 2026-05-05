@@ -25,6 +25,39 @@ const whatToExpect = [
   },
 ];
 
+const hubLinks = [
+  {
+    title: "Plan Your Visit",
+    description: "See what to expect on your first Sunday and let us know you're coming.",
+    href: "/visit",
+  },
+  {
+    title: "Ministries",
+    description: "Find weekly connection points for prayer, discipleship, and community.",
+    href: "/ministries",
+  },
+  {
+    title: "Events",
+    description: "Stay current with upcoming gatherings, classes, and special services.",
+    href: "/events",
+  },
+  {
+    title: "Prayer",
+    description: "Share a request or join us in standing together in faith.",
+    href: "/prayer",
+  },
+  {
+    title: "Give",
+    description: "Support the mission of Quench Life through secure online giving.",
+    href: "/give",
+  },
+  {
+    title: "Contact",
+    description: "Need help or directions? Reach out and our team will follow up.",
+    href: "/contact",
+  },
+];
+
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -84,6 +117,28 @@ export default function Home() {
                 priority
               />
             </div>
+          </div>
+        </section>
+
+        <section className="space-y-6 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-slate-500">Explore</p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">Your next step hub</h2>
+            <p className="mt-3 max-w-3xl text-slate-700">
+              Everything you need in one place to get connected at Quench Life.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {hubLinks.map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                className="group rounded-xl border border-slate-200 bg-slate-50 p-5 transition hover:border-slate-300 hover:bg-white"
+              >
+                <h3 className="text-base font-semibold text-slate-900 group-hover:underline">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-700">{item.description}</p>
+              </Link>
+            ))}
           </div>
         </section>
 
