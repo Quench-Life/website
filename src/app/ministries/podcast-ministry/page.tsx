@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { Apple, CirclePlay, Music2, Podcast } from "lucide-react";
 import podcastLogo from "../../../../media/podcast/Logo_onebyone_PR.png";
 
 export const metadata: Metadata = {
@@ -7,37 +8,71 @@ export const metadata: Metadata = {
   description: "Listen to messages and podcast episodes from Quench Life Christian Fellowship.",
 };
 
-const platforms = ["Apple Podcasts", "YouTube", "Spotify", "Podbean"];
+const platforms = [
+  {
+    name: "Apple Podcasts",
+    href: "https://podcasts.apple.com/us/podcast/one-by-one/id1455996620",
+    Icon: Apple,
+  },
+  {
+    name: "YouTube",
+    href: "https://www.youtube.com/@quenchlifechristianfellowship",
+    Icon: CirclePlay,
+  },
+  {
+    name: "Spotify",
+    href: "https://open.spotify.com/show/2gpTxpGaoWmKDWUNzbMCbw?si=4e24d6576659463e",
+    Icon: Music2,
+  },
+  {
+    name: "Podbean",
+    href: "https://quenchlife.podbean.com/",
+    Icon: Podcast,
+  },
+];
 
 export default function PodcastMinistryPage() {
   return (
     <div className="space-y-8">
-      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
-        <p className="text-sm font-semibold uppercase tracking-[0.15em] text-cyan-700">Listen</p>
-        <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Sermons and teaching</h1>
-        <p className="mt-4 text-slate-700">
-          Stay encouraged with biblical teaching from Quench Life Christian Fellowship throughout the week.
-        </p>
-        <div className="mt-5 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-3">
-          <Image src={podcastLogo} alt="Podcast ministry artwork" className="h-56 w-full object-contain sm:h-64" />
+      <section className="relative overflow-hidden rounded-2xl bg-slate-900 text-white shadow-sm">
+        <Image src={podcastLogo} alt="Podcast ministry artwork" fill className="object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/85 to-cyan-900/70" />
+        <div className="relative p-8 sm:p-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.15em] text-cyan-200">Listen</p>
+          <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Sermons and teaching</h1>
+          <p className="mt-4 max-w-2xl text-slate-200">
+            Stay encouraged with biblical teaching from Quench Life Christian Fellowship throughout the week.
+          </p>
         </div>
       </section>
 
       <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-        <h2 className="text-xl font-semibold text-slate-900">Current Episode: Its Function - Part 3</h2>
+        <h2 className="text-xl font-semibold text-slate-900">Current Episode: A Prayerful Life</h2>
         <p className="mt-3 text-slate-700">
-          From the series <span className="font-medium">The Body of Christ</span>: God has intentionally equipped
-          every believer for meaningful participation through spiritual gifts, abilities, and life experiences.
+          <span className="font-medium">What does it look like to truly pray without ceasing?</span>
+        </p>
+        <p className="mt-3 text-slate-700">
+          In this powerful series, Pastor Robert and his wife Carolyn unpack the fullness of prayer—showing how each
+          type of prayer plays a vital role in a believer&apos;s life. Whether you&apos;re new to prayer or seeking to
+          grow stronger in your faith, these messages will challenge and equip you to live a life marked by
+          intentional, ongoing connection with God.
         </p>
       </section>
 
       <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
         <h2 className="text-xl font-semibold text-slate-900">Listen on your preferred platform</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {platforms.map((platform) => (
-            <div key={platform} className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-medium text-slate-800">
-              {platform}
-            </div>
+          {platforms.map(({ name, href, Icon }) => (
+            <a
+              key={name}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-medium text-slate-800 transition hover:bg-slate-100"
+            >
+              <Icon className="h-4 w-4 text-slate-700" aria-hidden="true" />
+              <span>{name}</span>
+            </a>
           ))}
         </div>
       </section>

@@ -12,10 +12,13 @@ export default function PrayerPage() {
     <div className="space-y-8">
       <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
         <p className="text-sm font-semibold uppercase tracking-[0.15em] text-cyan-700">Prayer</p>
-        <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Let us pray</h1>
+        <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">LET US PRAY</h1>
         <p className="mt-4 text-slate-700">
-          Our Sunrise Prayer Call is a weekly gathering where we seek God together, intercede for one another, and
-          lift up our church and community in faith.
+          Our Sunrise Prayer Call is a weekly gathering where we come together as a church family to seek God at the
+          start of the day. During this time, we intercede on behalf of our local church body and the global body of
+          Christ, lifting up needs, concerns, and thanksgiving before the Lord. Scripture calls us to pray for one
+          another and to stand in the gap (1 Timothy 2:1; Ephesians 6:18), and this time of corporate prayer allows us
+          to do just that, together.
         </p>
       </section>
 
