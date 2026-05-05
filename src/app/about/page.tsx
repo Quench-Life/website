@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
@@ -14,9 +13,24 @@ export default function AboutPage() {
         <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
           Bible-centered. Jesus-focused. Spirit-led.
         </h1>
-        <p className="mt-4 max-w-3xl text-slate-700">
-          {siteConfig.shortName} exists to help people encounter Jesus, experience true freedom, and live transformed
-          lives that impact families, workplaces, and communities.
+        <p className="mt-4 max-w-4xl text-slate-700">
+          Quench, or satisfy, that inner thirst with the Word of God. Live the &quot;quench life&quot; and never
+          thirst again. &quot;But whoever drinks the water I give them will never thirst.&quot; (John 4:14).
+        </p>
+        <p className="mt-3 max-w-4xl text-slate-700">
+          The purpose/mission of Quench Life Christian Fellowship is to lead people to Jesus and membership in His
+          family, develop them to Christ-like maturity, and equip them for their ministry in the church and their life
+          mission in the world, to magnify God&apos;s name.
+        </p>
+        <p className="mt-3 max-w-4xl text-slate-700">
+          Quench Life&apos;s Vision Statement: To see every member in every generation living a filled life in Jesus
+          Christ. &quot;...I have come that they may have life, and have it to the full.&quot; (John 10:10)
+        </p>
+        <p className="mt-3 max-w-4xl text-slate-700">
+          Quench Life Christian Fellowship is a non-denominational church. Our purpose is based on The Great
+          Commandment (Matthew 22:36-40) and The Great Commission (Matthew 28:19-20). Found in these are the five
+          purposes of the church: Discipleship, Evangelism, Fellowship, Ministry and Worship. All of our activities
+          reflect these five purposes.
         </p>
       </section>
 
