@@ -35,6 +35,9 @@ export default function VisitPage() {
   const nextIsHybrid = isHybridSunday(nextServiceDate);
   const nextServiceLabel = nextIsHybrid ? "Hybrid In-Person Sunday" : "Online Sunday";
   const mapAddress = `${siteConfig.address.street}, ${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}`;
+  const onlineZoomUrl = "https://us02web.zoom.us/j/617224920?pwd=UGVac2R4R1ZjU0lKSzViSktPSm15Zz09";
+  const messageOutlineUrl = "/documents/sundayservice/message-outline.txt";
+  const inPersonAddress = `${siteConfig.address.street}, Suite 217, ${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}`;
 
   return (
     <div className="space-y-10 pb-24 md:pb-0">
@@ -60,16 +63,16 @@ export default function VisitPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
-              href="#plan-your-visit"
-              className="rounded-2xl bg-orange-400 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-orange-300"
+              href="#online-service"
+              className="rounded-2xl bg-blue-800 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
             >
-              Plan Your Visit
+              Online
             </Link>
             <Link
-              href="#location"
-              className="rounded-2xl border border-slate-300/40 bg-slate-900/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800/60"
+              href="#in-person-service"
+              className="rounded-2xl border border-blue-200/70 bg-blue-900/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800/40"
             >
-              Get Directions
+              In Person
             </Link>
           </div>
         </div>
@@ -119,10 +122,40 @@ export default function VisitPage() {
         </div>
       </section>
 
-      <section className="space-y-5">
+      <section id="online-service" className="rounded-3xl border border-blue-200 bg-white p-6 shadow-sm sm:p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Online Option</p>
+        <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">Worship Online This Sunday</h2>
+        <p className="mt-3 max-w-3xl text-slate-700">
+          Join us live at 11:00 AM Pacific from anywhere. You can hop on Zoom and follow along with the weekly message
+          outline.
+        </p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href={onlineZoomUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-xl bg-blue-800 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
+            Join via Zoom
+          </Link>
+          <Link
+            href={messageOutlineUrl}
+            target="_blank"
+            className="rounded-xl border border-blue-200 px-5 py-3 text-sm font-semibold text-blue-800 transition hover:bg-blue-50"
+          >
+            Message Outline
+          </Link>
+        </div>
+      </section>
+
+      <section id="in-person-service" className="space-y-5">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">No surprises</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">What your first Sunday feels like</h2>
+          <p className="mt-3 inline-flex items-center gap-2 rounded-xl border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-slate-800">
+            <MapPin className="h-4 w-4 text-blue-700" aria-hidden="true" />
+            {inPersonAddress}
+          </p>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -192,7 +225,7 @@ export default function VisitPage() {
       <div className="fixed inset-x-4 bottom-4 z-40 md:hidden">
         <Link
           href="#plan-your-visit"
-          className="block rounded-2xl bg-orange-400 px-6 py-4 text-center text-sm font-semibold text-slate-950 shadow-lg shadow-slate-900/20 transition hover:bg-orange-300"
+          className="block rounded-2xl bg-blue-800 px-6 py-4 text-center text-sm font-semibold text-white shadow-lg shadow-slate-900/20 transition hover:bg-blue-700"
         >
           Join Us — Plan Your Visit
         </Link>

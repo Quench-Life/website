@@ -54,7 +54,7 @@ export function PlanVisitForm() {
           name="name"
           required
           autoComplete="name"
-          className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 shadow-sm outline-none transition focus:border-slate-900"
+          className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 shadow-sm outline-none transition focus:border-blue-700"
         />
       </div>
       <div>
@@ -67,7 +67,7 @@ export function PlanVisitForm() {
           type="email"
           required
           autoComplete="email"
-          className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 shadow-sm outline-none transition focus:border-slate-900"
+          className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 shadow-sm outline-none transition focus:border-blue-700"
         />
       </div>
       <div>
@@ -83,13 +83,13 @@ export function PlanVisitForm() {
           required
           inputMode="numeric"
           defaultValue={1}
-          className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 shadow-sm outline-none transition focus:border-slate-900"
+          className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 shadow-sm outline-none transition focus:border-blue-700"
         />
       </div>
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-70"
+        className="w-full rounded-xl bg-blue-800 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
       >
         {status === "submitting" ? "Submitting..." : "Plan Your Visit"}
       </button>
