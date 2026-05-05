@@ -21,7 +21,7 @@ export function SiteFooter() {
           <Link href="/visit" className="block hover:text-white">
             Plan Your Visit
           </Link>
-          <Link href="/watch" className="block hover:text-white">
+          <Link href="/prayer" className="block hover:text-white">
             Prayer
           </Link>
           <Link href="/ministries" className="block hover:text-white">

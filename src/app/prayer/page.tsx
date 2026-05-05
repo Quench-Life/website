@@ -27,7 +27,11 @@ export default function PrayerPage() {
           church family.
         </p>
         <div className="mt-5 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-2">
-          <Image src={sunrisePrayerImage} alt="Sunrise Prayer Call" className="h-56 w-full rounded-xl object-cover sm:h-64" />
+          <Image
+            src={sunrisePrayerImage}
+            alt="Sunrise Prayer Call"
+            className="h-72 w-full rounded-xl object-contain object-top"
+          />
         </div>
       </section>
 
@@ -35,13 +39,15 @@ export default function PrayerPage() {
         <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
           <h3 className="text-lg font-semibold text-slate-900">Join the Prayer Call</h3>
           <p className="mt-2 text-sm text-slate-700">
-            Visit our events page for current connection details for the weekly prayer gathering.
+            Get connection details for the weekly Sunrise Prayer call.
           </p>
           <a
-            href="/events"
+            href="https://app.textinchurch.com/connect-cards/w0Oj25QVccOM8IaDngMR"
+            target="_blank"
+            rel="noreferrer"
             className="mt-4 inline-block rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-700"
           >
-            View Events
+            Join Prayer Call
           </a>
         </article>
 
@@ -51,10 +57,12 @@ export default function PrayerPage() {
             Share your request and our team will pray with you.
           </p>
           <a
-            href="mailto:hello@quenchlife.org?subject=Prayer%20Request"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSejvc1-Sp5kN5ULb6WT6_jDc-3NQnLDi9qXUvFSsgmp4RvAFA/viewform"
+            target="_blank"
+            rel="noreferrer"
             className="mt-4 inline-block rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-100"
           >
-            Email Prayer Team
+            Submit Prayer Request
           </a>
         </article>
       </section>

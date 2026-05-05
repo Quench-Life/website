@@ -35,7 +35,7 @@ export default function ConnectPage() {
           <h3 className="text-lg font-semibold text-slate-900">Events & Ministries</h3>
           <p className="mt-2 text-sm leading-6 text-slate-700">Bible Life Group, men&apos;s and women&apos;s discipleship, and more.</p>
         </Link>
-        <Link href="/watch" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:bg-slate-100">
+        <Link href="/prayer" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:bg-slate-100">
           <h3 className="text-lg font-semibold text-slate-900">Prayer</h3>
           <p className="mt-2 text-sm leading-6 text-slate-700">Join Sunrise Prayer on Mondays at 6:30 AM.</p>
         </Link>

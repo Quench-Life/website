@@ -6,7 +6,7 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/visit", label: "Plan Your Visit" },
-  { href: "/watch", label: "Prayer" },
+  { href: "/prayer", label: "Prayer" },
   { href: "/ministries", label: "Ministries" },
   { href: "/give", label: "Give" },
   { href: "/contact", label: "Contact" },
