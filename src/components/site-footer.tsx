@@ -22,7 +22,7 @@ export function SiteFooter() {
             Plan Your Visit
           </Link>
           <Link href="/watch" className="block hover:text-white">
-            Watch Messages
+            Prayer
           </Link>
           <Link href="/ministries" className="block hover:text-white">
             Join a Ministry

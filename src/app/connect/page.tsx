@@ -27,15 +27,15 @@ export default function ConnectPage() {
       </section>
 
       <section className="grid gap-6 md:grid-cols-3">
-        <Link href="/watch" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:bg-slate-100">
-          <h3 className="text-lg font-semibold text-slate-900">Watch Sunday Service</h3>
+        <Link href="/visit" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:bg-slate-100">
+          <h3 className="text-lg font-semibold text-slate-900">Sunday Service</h3>
           <p className="mt-2 text-sm leading-6 text-slate-700">Online every Sunday at 11:00 AM.</p>
         </Link>
         <Link href="/events" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:bg-slate-100">
           <h3 className="text-lg font-semibold text-slate-900">Events & Ministries</h3>
           <p className="mt-2 text-sm leading-6 text-slate-700">Bible Life Group, men&apos;s and women&apos;s discipleship, and more.</p>
         </Link>
-        <Link href="/prayer" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:bg-slate-100">
+        <Link href="/watch" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:bg-slate-100">
           <h3 className="text-lg font-semibold text-slate-900">Prayer</h3>
           <p className="mt-2 text-sm leading-6 text-slate-700">Join Sunrise Prayer on Mondays at 6:30 AM.</p>
         </Link>

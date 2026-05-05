@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   description: "Discover weekly ministries and connection points at Quench Life Christian Fellowship.",
 };
 
-const ministries = siteConfig.weeklyConnections.map((item) => {
+const ministries = siteConfig.weeklyConnections
+  .filter((item) => !item.startsWith("Prayer Ministry"))
+  .map((item) => {
   const [name, details] = item.split("—").map((part) => part.trim());
   const cta =
     name === "Bible Life Group"
       ? { label: "Learn More", href: "/ministries/bible-life-group" }
-      : name === "Prayer Ministry"
-        ? { label: "I'm Interested", href: "/ministries/prayer-ministry" }
-        : name === "Women's Discipleship"
+      : name === "Women's Discipleship"
           ? { label: "Learn More", href: "/ministries/womens-discipleship" }
           : name === "Men's Discipleship"
             ? { label: "Learn More", href: "/ministries/mens-discipleship" }

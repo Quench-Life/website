@@ -2,78 +2,48 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Watch Messages",
-  description: "Watch recent sermons from Quench Life Christian Fellowship in an embed-ready message library.",
+  title: "Prayer",
+  description: "Get connected to Sunrise Prayer and receive the weekly Zoom details.",
 };
 
-const recentMessages = [
-  { title: "Faith That Overcomes", topic: "Faith", date: "This Week" },
-  { title: "Freedom Through Christ", topic: "Freedom", date: "Last Week" },
-  { title: "Healing for the Whole Person", topic: "Healing", date: "2 Weeks Ago" },
-  { title: "Purpose in Every Season", topic: "Purpose", date: "3 Weeks Ago" },
-];
+const interestLink = "https://app.textinchurch.com/connect-cards/w0Oj25QVccOM8IaDngMR";
 
-const topics = ["Faith", "Freedom", "Healing", "Purpose"];
-
-export default function WatchMessagesPage() {
+export default function PrayerPage() {
   return (
     <div className="space-y-8">
       <section className="rounded-2xl bg-slate-900 p-8 text-white shadow-sm sm:p-10">
-        <p className="text-sm font-semibold uppercase tracking-[0.15em] text-amber-200">Watch Messages</p>
-        <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Message Library</h1>
+        <p className="text-sm font-semibold uppercase tracking-[0.15em] text-amber-200">Prayer Ministry</p>
+        <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">I&apos;m Interested</h1>
         <p className="mt-4 max-w-3xl text-slate-200">
-          Explore recent sermons and watch encouragement rooted in Scripture. This layout is ready for YouTube embed
-          links as you publish new messages.
+          Sunrise Prayer | Prayer changes things—and even more, it changes us. Our Prayer Ministry Team is hosting a
+          weekly Sunrise Prayer call via Zoom to help strengthen and support our community through prayer. Meetings
+          are every Monday from 6:30-7:00am. Click the button for more details and to receive the link.
+        </p>
+      </section>
+
+      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+        <h2 className="text-2xl font-semibold text-slate-900">Join Sunrise Prayer</h2>
+        <p className="mt-3 text-slate-700">
+          We gather every Monday from 6:30-7:00am for focused prayer and encouragement.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
-            href="/visit"
-            className="rounded-lg bg-amber-400 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-amber-300"
+            href={interestLink}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
           >
-            Plan Your Visit
+            I&apos;m Interested
           </Link>
           <Link
-            href="/contact"
-            className="rounded-lg border border-slate-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+            href={interestLink}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-100"
           >
-            Submit a Prayer Request
+            View Sign-up Link
           </Link>
         </div>
-      </section>
-
-      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-        <h2 className="text-2xl font-semibold text-slate-900">Recent Sermons</h2>
-        <div className="mt-5 grid gap-5 md:grid-cols-2">
-          {recentMessages.map((message) => (
-            <article key={message.title} className="rounded-xl border border-slate-200 p-4">
-              <div className="aspect-video rounded-lg border border-dashed border-slate-300 bg-slate-100 p-4 text-sm text-slate-600">
-                YouTube embed placeholder for “{message.title}”
-              </div>
-              <h3 className="mt-3 text-lg font-semibold text-slate-900">{message.title}</h3>
-              <p className="text-sm text-slate-600">
-                Topic: {message.topic} • {message.date}
-              </p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-        <h2 className="text-xl font-semibold text-slate-900">Topic Categories</h2>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {topics.map((topic) => (
-            <span key={topic} className="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
-              {topic}
-            </span>
-          ))}
-        </div>
-      </section>
-
-      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-        <h2 className="text-xl font-semibold text-slate-900">Livestream Ready</h2>
-        <p className="mt-3 text-slate-700">
-          This page is structured for future livestream integration so weekly broadcasts can be highlighted here.
-        </p>
       </section>
     </div>
   );
