@@ -122,6 +122,28 @@ export default function VisitPage() {
         </div>
       </section>
 
+      <section className="rounded-3xl border border-blue-200 bg-blue-50/50 p-6 shadow-sm sm:p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Current Message Series</p>
+        <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">The Book of Hebrews</h2>
+        <p className="mt-3 max-w-4xl text-slate-700">
+          The Book of Hebrews reveals the supremacy of Jesus Christ and the power of God&apos;s Word in the life of every
+          believer.
+        </p>
+        <p className="mt-3 max-w-4xl text-slate-700">
+          This message series challenges us to move forward in maturity and remain anchored in the truth of who Jesus is
+          and all that He has accomplished. Be sure to download the message outline to follow along during the service.
+        </p>
+        <div className="mt-6">
+          <Link
+            href={messageOutlineUrl}
+            target="_blank"
+            className="inline-flex rounded-xl bg-blue-800 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
+            Message Outline
+          </Link>
+        </div>
+      </section>
+
       <section id="online-service" className="rounded-3xl border border-blue-200 bg-white p-6 shadow-sm sm:p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Online Option</p>
         <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">Worship Online This Sunday</h2>
