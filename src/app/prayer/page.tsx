@@ -22,19 +22,16 @@ export default function PrayerPage() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-        <h2 className="text-xl font-semibold text-slate-900">Sunrise Prayer Call</h2>
-        <p className="mt-2 text-sm font-medium text-cyan-700">Mondays at 6:30 AM</p>
-        <p className="mt-3 text-slate-700">
-          Whether you join live to pray with us or submit a prayer request, we invite you to stand in faith with our
-          church family.
-        </p>
-        <div className="mt-5 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-2">
-          <Image
-            src={sunrisePrayerImage}
-            alt="Sunrise Prayer Call"
-            className="h-72 w-full rounded-xl object-contain object-top"
-          />
+      <section className="relative min-h-[24rem] overflow-hidden rounded-2xl bg-slate-900 text-white shadow-sm">
+        <Image src={sunrisePrayerImage} alt="Sunrise Prayer Call" fill className="object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/75 to-cyan-900/60" />
+        <div className="relative flex h-full flex-col justify-end p-8 sm:p-10">
+          <h2 className="text-2xl font-semibold">Sunrise Prayer Call</h2>
+          <p className="mt-2 text-sm font-medium text-cyan-200">Mondays at 6:30 AM</p>
+          <p className="mt-3 max-w-2xl text-slate-100">
+            Whether you join live to pray with us or submit a prayer request, we invite you to stand in faith with our
+            church family.
+          </p>
         </div>
       </section>
 
