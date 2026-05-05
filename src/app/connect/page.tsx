@@ -40,6 +40,19 @@ export default function ConnectPage() {
           <p className="mt-2 text-sm leading-6 text-slate-700">Join Sunrise Prayer on Mondays at 6:30 AM.</p>
         </Link>
       </section>
+
+      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+        <h2 className="text-xl font-semibold text-slate-900">LSC Promo</h2>
+        <p className="mt-3 text-slate-700">
+          Watch the latest Life Support Class promotional video and share it with someone who should join.
+        </p>
+        <div className="mt-5 overflow-hidden rounded-2xl border border-slate-200">
+          <video controls preload="metadata" className="h-auto w-full">
+            <source src="/api/media/lsc-promo" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { NextSundayWidget } from "@/components/next-sunday-widget";
 import { siteConfig } from "@/lib/site";
+import homepageBanner from "../../media/homepage/Quench_WebBanners_Rob&Carolyn.png";
 
 export const metadata: Metadata = {
   title: "Jesus Christ: The Water of Life.",
@@ -63,12 +65,12 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="space-y-12">
         <section className="relative overflow-hidden rounded-3xl bg-blue-950 text-white shadow-2xl">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1800&q=80')",
-            }}
+          <Image
+            src={homepageBanner}
+            alt="Pastor Robert and Carolyn Scott at Quench Life"
+            fill
+            className="object-cover object-center"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-950/95 via-blue-900/90 to-blue-700/75" />
           <div className="absolute -bottom-24 left-0 right-0 h-56 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.28),transparent_70%)]" />

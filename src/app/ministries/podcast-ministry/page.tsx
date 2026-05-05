@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import podcastLogo from "../../../../media/podcast/Logo_onebyone_PR.png";
 
 export const metadata: Metadata = {
   title: "Podcast Ministry",
@@ -16,6 +18,9 @@ export default function PodcastMinistryPage() {
         <p className="mt-4 text-slate-700">
           Stay encouraged with biblical teaching from Quench Life Christian Fellowship throughout the week.
         </p>
+        <div className="mt-5 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-3">
+          <Image src={podcastLogo} alt="Podcast ministry artwork" className="h-56 w-full object-contain sm:h-64" />
+        </div>
       </section>
 
       <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">

@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
+import logoImage from "../../media/logo/QLCF_logo_transparent.png";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -16,6 +18,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold tracking-tight text-slate-900">
+          <Image src={logoImage} alt="Quench Life logo" className="h-10 w-10 object-contain" />
           <span>{siteConfig.shortName}</span>
         </Link>
         <nav className="hidden items-center gap-5 text-sm font-medium text-slate-700 lg:flex">

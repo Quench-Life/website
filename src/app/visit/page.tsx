@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Baby, Car, Clock3, MapPin, MonitorPlay, Shirt, Users } from "lucide-react";
 import { GoogleMapEmbed } from "@/components/google-map-embed";
 import { PlanVisitForm } from "@/components/plan-visit-form";
 import { siteConfig } from "@/lib/site";
+import hebrewsSeriesImage from "../../../media/message_series/hebrews.png";
 
 export const metadata: Metadata = {
   title: "Plan Your Visit",
@@ -125,6 +127,9 @@ export default function VisitPage() {
       <section className="rounded-3xl border border-blue-200 bg-blue-50/50 p-6 shadow-sm sm:p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Current Message Series</p>
         <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">The Book of Hebrews</h2>
+        <div className="mt-4 overflow-hidden rounded-2xl border border-blue-200 bg-white">
+          <Image src={hebrewsSeriesImage} alt="Current Message Series: The Book of Hebrews" className="h-64 w-full object-cover" />
+        </div>
         <p className="mt-3 max-w-4xl text-slate-700">
           The Book of Hebrews reveals the supremacy of Jesus Christ and the power of God&apos;s Word in the life of every
           believer.

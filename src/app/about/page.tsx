@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { LeadershipBioCard } from "@/components/leadership-bio-card";
+import carolynPhoto from "../../../media/leadership/CS bio pic.jpg";
+import pastorRobertPhoto from "../../../media/leadership/PR bio pic_edited.jpg";
 
 export const metadata: Metadata = {
   title: "About",
@@ -52,11 +54,17 @@ export default function AboutPage() {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-slate-900">Leadership</h2>
         <div className="grid gap-6 lg:grid-cols-2">
-          <LeadershipBioCard role="Pastor" name="Robert L. Scott Jr." paragraphs={pastorRobertBio} />
+          <LeadershipBioCard
+            role="Pastor"
+            name="Robert L. Scott Jr."
+            paragraphs={pastorRobertBio}
+            image={{ src: pastorRobertPhoto, alt: "Pastor Robert L. Scott Jr." }}
+          />
           <LeadershipBioCard
             role="Pastor's Wife & Executive Director"
             name="Carolyn Scott"
             paragraphs={carolynScottBio}
+            image={{ src: carolynPhoto, alt: "Carolyn Scott" }}
           />
         </div>
       </section>

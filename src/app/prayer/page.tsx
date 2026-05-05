@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import sunrisePrayerImage from "../../../media/prayer/sunriseprayer_edited.jpg";
 
 export const metadata: Metadata = {
   title: "Prayer",
@@ -24,6 +26,9 @@ export default function PrayerPage() {
           Whether you join live to pray with us or submit a prayer request, we invite you to stand in faith with our
           church family.
         </p>
+        <div className="mt-5 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-2">
+          <Image src={sunrisePrayerImage} alt="Sunrise Prayer Call" className="h-56 w-full rounded-xl object-cover sm:h-64" />
+        </div>
       </section>
 
       <section className="grid gap-6 md:grid-cols-2">
