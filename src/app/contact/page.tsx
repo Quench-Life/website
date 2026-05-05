@@ -42,8 +42,21 @@ export default function ContactPage() {
         </article>
 
         <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-          <h2 className="text-2xl font-semibold text-slate-900">Send Us a Message</h2>
-          <p className="mt-3 text-slate-700">We will follow up with you as soon as possible.</p>
+          <h2 className="text-2xl font-semibold text-slate-900">Quench Life Connection Card</h2>
+          <p className="mt-3 text-slate-700">
+            Complete the fields below to let us know how we can better serve you. (Note: Quench Life will never share
+            your contact information or send you any spam. The purpose of this form is only to stay in touch with you
+            and learn how we can be of assistance).
+          </p>
+          <p className="mt-4 text-sm font-medium text-slate-800">You can use this form to let us know if:</p>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-700">
+            <li>I&apos;m new here and would like more information about Quench.</li>
+            <li>I made the decision to follow Jesus today.</li>
+            <li>I&apos;m considering opening my life to Jesus.</li>
+            <li>I want to know how I can become a member of Quench Life (Class 101).</li>
+            <li>I&apos;d like to learn more about growing spiritually (Class 201).</li>
+            <li>I want to serve others in the body of Christ by volunteering with Quench Life.</li>
+          </ul>
           <div className="mt-6">
             <ContactForm />
           </div>

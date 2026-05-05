@@ -160,13 +160,6 @@ export default function VisitPage() {
           >
             Join via Zoom
           </Link>
-          <Link
-            href={messageOutlineUrl}
-            target="_blank"
-            className="rounded-xl border border-blue-200 px-5 py-3 text-sm font-semibold text-blue-800 transition hover:bg-blue-50"
-          >
-            Message Outline
-          </Link>
         </div>
       </section>
 
