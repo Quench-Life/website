@@ -1,9 +1,24 @@
 import type { Metadata } from "next";
+import { LeadershipBioCard } from "@/components/leadership-bio-card";
 
 export const metadata: Metadata = {
   title: "About",
   description: "Learn our mission, core beliefs, and vision at Quench Life Christian Fellowship.",
 };
+
+const pastorRobertBio = [
+  "Pastor Robert L. Scott Jr. is originally from Oakland, California where he obtained his early education through high school. He accepted the call to the ministry in the year 2000, as a member of Bethel Missionary Baptist Church, pastored by the late Dr. Herbert Guice. Pastor Robert attended Bay Cities Bible Institute where he met the late Dr. Donel Reedus, Pastor of East Bay Bible Church. Pastor Robert later became the Youth Minister and Worship Pastor at East Bay. There he continued his maturation and received the honor of being ordained in the ministry. Later Pastor Robert and family joined Destiny Christian Fellowship in Fremont, California where he served in the Men’s Discipleship Ministry and as part of the ministerial support team to the late Pastor Paul E. Sheppard.",
+  "Pastor Robert participated in other ministry work with organizations/churches such as the Men in the Cross, B.A.S.S., Praise Fellowship Bible Church, and Abundant Life Christian Fellowship. A passionate teacher, coach and mentor, Pastor Robert taught bible class at lunch time during his previous employment with New United Motors Manufacturing Inc. (NUMMI) for 16 years and coached basketball for about the same.",
+  "Pastor Robert completed his undergraduate education with William Jessup University where he earned a Bachelor of Science degree in Counseling Psychology and a minor in Bible and Theology. He has been married since 1986 to his high school sweetheart Carolyn Scott. They are proud parents of son Kamile-Jamal (K.J.) Scott, and goddaughters Sarah Moncada and Mikiah Aubert, and now blessed grandparents of a beautiful baby girl! The newest addition to the family is courtesy of KJ and his wife Nicole, all of which are blessings from the Lord.",
+  "Since 2015 Pastor Robert had been sensing the Lord saying He was going to do something great in Robert’s life and ministry; something greater than Robert had ever done before. Through a series of events in 2016 that are now a part of his testimony, Pastor Robert and his wife followed the Lord’s leading to launch Quench Life Christian Fellowship. Pastor and his wife press forward to fulfill God's call while continuing to maintain full-time employment outside of the church.",
+];
+
+const carolynScottBio = [
+  "Carolyn Scott was raised in Oakland, California where she obtained her early education through high school. She accepted Christ at an early age and was baptized at Bethel Missionary Baptist Church by the late Dr. Herbert Guice. There she first served in ministry service as a Secretary for her Sunday School class. She later also served as a Sunday School teacher and member of the Echoes of Bethel and Voices of Bethel choirs for many years. When her husband followed the Lord’s leading and took on different ministry positions at other churches, Carolyn made the transitions with him and continued to support him in service. She also served in administration and the children’s ministry for the churches they joined.",
+  "Carolyn completed her undergraduate degree at California State University East Bay (Hayward) where she majored in Adult Human Development and minored in Business Administration. She also earned a Master of Public Administration with emphasis in Human Resource Management from the same institution. Vocationally she has worked in the public sector for over 25 years with a good portion of those years being in the fields of Human Resources and Education.",
+  "Carolyn is happily married to her former high school sweetheart and Student Body President, Pastor Robert Scott Jr. They are proud parents of son Kamile-Jamal (K.J.) Scott, and goddaughters Sarah Moncada and Mikiah Aubert, and now blessed grandparents of a beautiful baby girl! The newest addition to the family is courtesy of KJ and his wife Nicole, all of which are blessings from the Lord.",
+  "Carolyn is very nurturing, has a heart to serve, and is gifted in administration and leadership. She presses forward to fulfill God's call while continuing to maintain full-time employment outside of the church. She is excited and constantly looks forward to what the Lord has in store for her life of service through Quench Life Christian Fellowship.",
+];
 
 export default function AboutPage() {
   return (
@@ -34,47 +49,16 @@ export default function AboutPage() {
         </p>
       </section>
 
-      <section className="grid gap-6 md:grid-cols-2">
-        <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-semibold text-slate-900">Our Mission</h2>
-          <p className="mt-3 text-slate-700">
-            To lead people into a life-giving relationship with Jesus Christ through worship, discipleship, prayer,
-            and community.
-          </p>
-        </article>
-        <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-semibold text-slate-900">Our Vision</h2>
-          <p className="mt-3 text-slate-700">
-            A Spirit-filled church in Dublin where people are refreshed, equipped, and sent to bring Christ into every
-            sphere of life.
-          </p>
-        </article>
-      </section>
-
-      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-        <h2 className="text-2xl font-semibold text-slate-900">Core Beliefs</h2>
-        <ul className="mt-4 space-y-3 text-slate-700">
-          <li>• The Bible is the inspired, authoritative Word of God.</li>
-          <li>• Jesus Christ is Savior, Lord, and the only way to eternal life.</li>
-          <li>• The Holy Spirit empowers believers for holy living and mission.</li>
-          <li>• The local church is called to love God, love people, and make disciples.</li>
-        </ul>
-      </section>
-
-      <section className="grid gap-6 md:grid-cols-2">
-        <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-semibold text-slate-900">Leadership</h2>
-          <p className="mt-3 text-slate-700">
-            Pastor bio and leadership details can be updated here as your ministry team grows.
-          </p>
-        </article>
-        <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-semibold text-slate-900">Scripture Foundation</h2>
-          <p className="mt-3 text-slate-700 italic">
-            “Now to him who is able to do immeasurably more than all we ask or imagine, according to his power that is
-            at work within us.” — Ephesians 3:20
-          </p>
-        </article>
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-slate-900">Leadership</h2>
+        <div className="grid gap-6 lg:grid-cols-2">
+          <LeadershipBioCard role="Pastor" name="Robert L. Scott Jr." paragraphs={pastorRobertBio} />
+          <LeadershipBioCard
+            role="Pastor's Wife & Executive Director"
+            name="Carolyn Scott"
+            paragraphs={carolynScottBio}
+          />
+        </div>
       </section>
     </div>
   );
