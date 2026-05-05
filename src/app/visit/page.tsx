@@ -124,7 +124,7 @@ export default function VisitPage() {
         </div>
       </section>
 
-      <section className="relative min-h-[24rem] overflow-hidden rounded-3xl bg-blue-950 text-white shadow-sm sm:min-h-[28rem] lg:min-h-[38rem]">
+      <section className="relative min-h-[30rem] overflow-hidden rounded-3xl bg-blue-950 text-white shadow-sm sm:min-h-[34rem] lg:min-h-[38rem]">
         <Image src={hebrewsSeriesImage} alt="Current Message Series: The Book of Hebrews" fill className="object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-blue-950/80 to-blue-900/65" />
         <div className="absolute inset-0 z-10 flex flex-col justify-end p-6 sm:p-8">
