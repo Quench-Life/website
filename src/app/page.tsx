@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { HomePhotoCarousel } from "@/components/home-photo-carousel";
 import { NextSundayWidget } from "@/components/next-sunday-widget";
 import { siteConfig } from "@/lib/site";
 import homepageBanner from "../../media/homepage/Quench_WebBanners_Rob&Carolyn.png";
+import homePhotoOne from "../../media/homepage/podium.jpg";
+import homePhotoTwo from "../../media/homepage/come_on_in.jpg";
+import homePhotoThree from "../../media/homepage/family-at-podium.jpg";
+import homePhotoFour from "../../media/prayer/sunriseprayer_edited.jpg";
 
 export const metadata: Metadata = {
   title: "Jesus Christ: The Water of Life.",
@@ -40,6 +45,13 @@ const beliefCards = [
     scripture: "2 Timothy 3:16-17",
     description: "The Bible is God-breathed, trustworthy, and our foundation for truth and discipleship.",
   },
+];
+
+const homeCarouselSlides = [
+  { src: homePhotoOne, alt: "Worship podium prepared for service at Quench Life" },
+  { src: homePhotoTwo, alt: "Church member greeting others before service" },
+  { src: homePhotoThree, alt: "Church family sharing encouragement at the podium" },
+  { src: homePhotoFour, alt: "Sunrise prayer gathering inspiration image" },
 ];
 
 export default function Home() {
@@ -110,23 +122,7 @@ export default function Home() {
 
         <section className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
           <NextSundayWidget />
-          <article className="overflow-hidden rounded-3xl border border-blue-200 bg-white shadow-sm">
-            <div
-              className="h-full min-h-72 bg-cover bg-center"
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1451340770902-e4a68e27c470?auto=format&fit=crop&w=1200&q=80')",
-              }}
-            >
-              <div className="h-full bg-gradient-to-t from-blue-950/85 to-blue-900/20 p-6 text-white">
-                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-blue-200">Serving our neighbors</p>
-                <h2 className="mt-3 text-2xl font-bold">Bay Area Clarity & Care</h2>
-                <p className="mt-3 max-w-sm text-blue-100">
-                  We make it simple to know exactly where to come and what to expect each Sunday.
-                </p>
-              </div>
-            </div>
-          </article>
+          <HomePhotoCarousel slides={homeCarouselSlides} />
         </section>
 
         <section className="space-y-6 rounded-3xl border border-blue-200 bg-white p-8 shadow-sm">
