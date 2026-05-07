@@ -7,6 +7,7 @@ import { siteConfig } from "@/lib/site";
 import homepageBanner from "../../media/homepage/Quench_WebBanners_Rob&Carolyn.png";
 import homePhotoOne from "../../media/homepage/carousel/podium.jpg";
 import homePhotoTwo from "../../media/homepage/carousel/come_on_in.jpg";
+import homePhotoThree from "../../media/homepage/carousel/IMG_7107.jpg";
 
 export const metadata: Metadata = {
   title: "Jesus Christ: The Water of Life.",
@@ -48,6 +49,7 @@ const beliefCards = [
 const homeCarouselSlides = [
   { src: homePhotoOne, alt: "Worship podium prepared for service at Quench Life" },
   { src: homePhotoTwo, alt: "Church member greeting others before service" },
+  { src: homePhotoThree, alt: "Church family speaking at the podium" },
 ];
 
 export default function Home() {
