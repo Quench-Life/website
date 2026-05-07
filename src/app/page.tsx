@@ -5,10 +5,9 @@ import { HomePhotoCarousel } from "@/components/home-photo-carousel";
 import { NextSundayWidget } from "@/components/next-sunday-widget";
 import { siteConfig } from "@/lib/site";
 import homepageBanner from "../../media/homepage/Quench_WebBanners_Rob&Carolyn.png";
-import homePhotoOne from "../../media/homepage/podium.jpg";
-import homePhotoTwo from "../../media/homepage/come_on_in.jpg";
-import homePhotoThree from "../../media/homepage/family-at-podium.jpg";
-import homePhotoFour from "../../media/prayer/sunriseprayer_edited.jpg";
+import homePhotoOne from "../../media/homepage/carousel/podium.jpg";
+import homePhotoTwo from "../../media/homepage/carousel/come_on_in.jpg";
+import homePhotoThree from "../../media/homepage/carousel/family-at-podium.jpg";
 
 export const metadata: Metadata = {
   title: "Jesus Christ: The Water of Life.",
@@ -51,7 +50,6 @@ const homeCarouselSlides = [
   { src: homePhotoOne, alt: "Worship podium prepared for service at Quench Life" },
   { src: homePhotoTwo, alt: "Church member greeting others before service" },
   { src: homePhotoThree, alt: "Church family sharing encouragement at the podium" },
-  { src: homePhotoFour, alt: "Sunrise prayer gathering inspiration image" },
 ];
 
 export default function Home() {
