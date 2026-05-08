@@ -15,9 +15,9 @@ const navItems = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
         <Link href="/" aria-label="Go to home page" className="flex items-center">
-          <Image src={logoImage} alt="Quench Life logo" className="h-14 w-14 object-contain" />
+          <Image src={logoImage} alt="Quench Life logo" className="h-16 w-16 object-contain sm:h-[4.5rem] sm:w-[4.5rem]" />
         </Link>
         <nav className="hidden items-center gap-5 text-sm font-medium text-slate-700 lg:flex">
           {navItems.map((item) => (
