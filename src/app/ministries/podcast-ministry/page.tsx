@@ -47,16 +47,37 @@ export default function PodcastMinistryPage() {
       </section>
 
       <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-        <h2 className="text-xl font-semibold text-slate-900">Current Episode: A Prayerful Life</h2>
-        <p className="mt-3 text-slate-700">
-          <span className="font-medium">What does it look like to truly pray without ceasing?</span>
-        </p>
-        <p className="mt-3 text-slate-700">
-          In this powerful series, Pastor Robert and his wife Carolyn unpack the fullness of prayer—showing how each
-          type of prayer plays a vital role in a believer&apos;s life. Whether you&apos;re new to prayer or seeking to
-          grow stronger in your faith, these messages will challenge and equip you to live a life marked by
-          intentional, ongoing connection with God.
-        </p>
+        <div className="grid gap-6 lg:grid-cols-2">
+          <article>
+            <h2 className="text-xl font-semibold text-slate-900">Current Episode: A Prayerful Life</h2>
+            <p className="mt-3 text-slate-700">
+              <span className="font-medium">What does it look like to truly pray without ceasing?</span>
+            </p>
+            <p className="mt-3 text-slate-700">
+              In this powerful series, Pastor Robert and his wife Carolyn unpack the fullness of prayer—showing how
+              each type of prayer plays a vital role in a believer&apos;s life. Whether you&apos;re new to prayer or
+              seeking to grow stronger in your faith, these messages will challenge and equip you to live a life
+              marked by intentional, ongoing connection with God.
+            </p>
+          </article>
+          <article className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <h3 className="text-base font-semibold text-slate-900">Listen on this page</h3>
+            <div className="mt-3">
+              <iframe
+                title="One by One"
+                allowTransparency
+                height={315}
+                width="100%"
+                style={{ border: "none", minWidth: "min(100%, 430px)", height: "315px" }}
+                scrolling="no"
+                data-name="pb-iframe-player"
+                src="https://www.podbean.com/player-v2/?i=g4zh4-429d26-pbblog-playlist&share=1&download=1&rtl=0&fonts=Arial&skin=1&font-color=auto&logo_link=episode_page&order=episodic&limit=10&filter=all&ss=a713390a017602015775e868a2cf26b0&btn-skin=8bbb4e&size=315"
+                loading="lazy"
+                allowFullScreen
+              />
+            </div>
+          </article>
+        </div>
       </section>
 
       <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
