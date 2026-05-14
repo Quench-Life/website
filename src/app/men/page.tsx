@@ -9,7 +9,32 @@ export const metadata: Metadata = {
 const joinZoomUrl = "https://us02web.zoom.us/j/610364243?pwd=MkdtTjB2QzRPSmlFbkhtOEJOQVlpUT09";
 const meetingAgendaUrl = "/documents/meantorship-project/may2.pdf";
 
+function getPacificNow() {
+  return new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+}
+
+function isMeetingSunday(date: Date) {
+  if (date.getDay() !== 0) return false;
+  const weekOfMonth = Math.ceil(date.getDate() / 7);
+  return weekOfMonth === 1 || weekOfMonth === 3 || weekOfMonth === 5;
+}
+
+function getNextMeetingDate(now: Date) {
+  const nextDate = new Date(now);
+  for (let i = 0; i < 370; i += 1) {
+    if (isMeetingSunday(nextDate)) return nextDate;
+    nextDate.setDate(nextDate.getDate() + 1);
+  }
+  return now;
+}
+
+function formatMeetingDate(date: Date) {
+  return date.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
+}
+
 export default function MenPage() {
+  const nextMeetingDate = getNextMeetingDate(getPacificNow());
+
   return (
     <div className="space-y-8">
       <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
@@ -17,7 +42,8 @@ export default function MenPage() {
         <p className="mt-3 text-lg text-slate-700">
           Becoming the men we are <em>meant</em> to be.
         </p>
-        <p className="mt-3 text-sm font-medium text-cyan-700">1st, 3rd & 5th Saturdays @ 9:00 AM</p>
+        <p className="mt-3 text-sm font-medium text-cyan-700">1st, 3rd & 5th Sundays @ 9:00 AM</p>
+        <p className="mt-2 text-sm font-semibold text-slate-800">Next Meeting is {formatMeetingDate(nextMeetingDate)}.</p>
         <div className="mt-5 flex flex-wrap gap-3">
           <a
             href={joinZoomUrl}
