@@ -37,37 +37,48 @@ export default function MensDiscipleshipPage() {
 
   return (
     <div className="space-y-8">
-      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">MEANTorship Project</h1>
-        <p className="mt-3 text-lg text-slate-700">
-          Becoming the men we are <em>meant</em> to be.
-        </p>
-        <p className="mt-3 text-sm font-medium text-cyan-700">1st, 3rd & 5th Sundays @ 9:00 AM</p>
-        <p className="mt-2 text-sm font-semibold text-slate-800">Next Meeting is {formatMeetingDate(nextMeetingDate)}.</p>
-        <div className="mt-5 flex flex-wrap gap-3">
-          <a
-            href={joinZoomUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
-          >
-            Join Zoom Meeting
-          </a>
-          <a
-            href={meetingAgendaUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-100"
-          >
-            <FileDown className="h-4 w-4" aria-hidden="true" />
-            Download Meeting Agenda
-          </a>
+      <section className="relative overflow-hidden rounded-2xl shadow-sm">
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('https://static.wixstatic.com/media/3b19d5_79b95aa3215d4df198b448ff587ac339~mv2.jpg')",
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/80 to-cyan-900/65" />
         </div>
-        <p className="mt-4 text-slate-700">
-          Meetings are approximately 90 minutes, 2-3 times per month, and open to all men age 18 and over. Come as
-          you are and bring a friend. To protect the integrity and confidentiality of our meetings, we ask that you
-          leave your video display on.
-        </p>
+        <div className="relative p-8 sm:p-10">
+          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">MEANTorship Project</h1>
+          <p className="mt-3 text-lg text-slate-100">
+            Becoming the men we are <em>meant</em> to be.
+          </p>
+          <p className="mt-3 text-sm font-medium text-cyan-200">1st, 3rd & 5th Sundays @ 9:00 AM</p>
+          <p className="mt-2 text-sm font-semibold text-white">Next Meeting is {formatMeetingDate(nextMeetingDate)}.</p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <a
+              href={joinZoomUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex rounded-lg bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+            >
+              Join Zoom Meeting
+            </a>
+            <a
+              href={meetingAgendaUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/70 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
+            >
+              <FileDown className="h-4 w-4" aria-hidden="true" />
+              Download Meeting Agenda
+            </a>
+          </div>
+          <p className="mt-4 text-slate-100">
+            Meetings are approximately 90 minutes, 2-3 times per month, and open to all men age 18 and over. Come as
+            you are and bring a friend. To protect the integrity and confidentiality of our meetings, we ask that you
+            leave your video display on.
+          </p>
+        </div>
       </section>
 
       <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
