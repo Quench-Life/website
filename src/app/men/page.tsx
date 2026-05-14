@@ -5,31 +5,53 @@ export const metadata: Metadata = {
   description: "Learn about the MEANTorship Project men's discipleship ministry.",
 };
 
+const joinZoomUrl = "https://us02web.zoom.us/j/610364243?pwd=MkdtTjB2QzRPSmlFbkhtOEJOQVlpUT09";
+
 export default function MenPage() {
   return (
     <div className="space-y-8">
       <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">MEANTorship Project</h1>
-        <p className="mt-2 text-sm font-medium text-cyan-700">1st, 3rd & 5th Saturdays at 9:00 AM</p>
+        <p className="mt-3 text-lg text-slate-700">
+          Becoming the men we are <em>meant</em> to be.
+        </p>
+        <p className="mt-3 text-sm font-medium text-cyan-700">1st, 3rd & 5th Saturdays @ 9:00 AM</p>
+        <div className="mt-5">
+          <a
+            href={joinZoomUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
+          >
+            Join Zoom Meeting
+          </a>
+        </div>
         <p className="mt-4 text-slate-700">
-          Becoming the men we are meant to be through discipleship, accountability, and practical growth.
+          Meetings are approximately 90 minutes, 2-3 times per month, and open to all men age 18 and over. Come as
+          you are and bring a friend. To protect the integrity and confidentiality of our meetings, we ask that you
+          leave your video display on.
         </p>
       </section>
 
       <section className="grid gap-6 md:grid-cols-3">
         <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-lg font-semibold text-slate-900">Mission</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Our Mission</h2>
           <p className="mt-2 text-sm text-slate-700">
-            To generate positive behavioral change by helping men learn to lead, teach, and team.
+            To generate positive, behavioral change in our communities by providing an environment where men are
+            learning how to lead, teach, and team. (Genesis 2:15-25)
           </p>
         </article>
         <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-lg font-semibold text-slate-900">Vision</h2>
-          <p className="mt-2 text-sm text-slate-700">Better relationships, better communities, and a better world.</p>
+          <h2 className="text-lg font-semibold text-slate-900">Our Vision</h2>
+          <p className="mt-2 text-sm text-slate-700">
+            Better relationships, better communities and a better world. (Philippians 2:1-5)
+          </p>
         </article>
         <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="text-lg font-semibold text-slate-900">Ground Rules</h2>
-          <p className="mt-2 text-sm text-slate-700">Respect, honesty, transparency, confidentiality, and participation.</p>
+          <p className="mt-2 text-sm text-slate-700">
+            Respect, Honesty, Transparency, Confidentiality, Participation, Humility, Teachability.
+          </p>
         </article>
       </section>
     </div>
