@@ -17,19 +17,24 @@ export const metadata: Metadata = {
 
 const teachingCards = [
   {
-    title: "Jesus Christ: The Water of Life",
-    verse: "John 4:13-14",
-    description: "Come to the One who satisfies thirst forever and offers living water through the Gospel.",
+    title: "Current Message Series: The Book of Hebrews",
+    verse: "Current Message",
+    description:
+      "Join us as we explore the supremacy of Jesus Christ and the power of God's Word for everyday life.",
+    cta: { label: "Join Us — Plan Your Visit", href: "/visit" },
   },
   {
-    title: "Walk in the Spirit",
-    verse: "Galatians 5:16-25",
-    description: "Learn how life in Christ produces holiness, freedom, and the fruit of the Spirit.",
+    title: "Bible Life Group",
+    verse: "Wednesdays · 7:30 PM",
+    description: "Grow in Scripture and community through weekly Zoom discussion and practical application.",
+    cta: { label: "Learn More", href: "/ministries/bible-life-group" },
   },
   {
-    title: "Built on the Word",
-    verse: "2 Timothy 3:16-17",
-    description: "Be rooted in Scripture as the final authority for faith, discipleship, and mission.",
+    title: "Podcast Current Episode: A Prayerful Life",
+    verse: "Podcast Ministry",
+    description:
+      "Listen as Pastor Robert and Carolyn unpack what it means to live with intentional, ongoing prayer.",
+    cta: { label: "Learn More", href: "/ministries/podcast-ministry" },
   },
 ];
 
@@ -126,7 +131,7 @@ export default function Home() {
         <section className="space-y-6 rounded-3xl border border-blue-200 bg-white p-8 shadow-sm">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.15em] text-blue-700">Word of God</p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">Current Teaching</h2>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">Current Teachings</h2>
             <p className="mt-3 max-w-3xl text-slate-700">
               Bold, biblical teaching centered on the finished work and present Lordship of Jesus Christ.
             </p>
@@ -137,6 +142,16 @@ export default function Home() {
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue-700">{card.verse}</p>
                 <h3 className="mt-2 text-xl font-bold text-slate-900">{card.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-slate-700">{card.description}</p>
+                {"cta" in card ? (
+                  <div className="mt-4">
+                    <Link
+                      href={card.cta.href}
+                      className="inline-flex rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700"
+                    >
+                      {card.cta.label}
+                    </Link>
+                  </div>
+                ) : null}
               </article>
             ))}
           </div>
