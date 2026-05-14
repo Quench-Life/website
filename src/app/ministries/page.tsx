@@ -19,7 +19,7 @@ const ministries = siteConfig.weeklyConnections
           : name === "Men's Discipleship"
             ? { label: "Learn More", href: "/ministries/mens-discipleship" }
             : name === "Podcast Ministry"
-              ? { label: "Listen In", href: "/ministries/podcast-ministry" }
+              ? { label: "Listen In", href: "/listen" }
         : null;
 
   return {

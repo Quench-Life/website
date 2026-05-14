@@ -34,7 +34,7 @@ const teachingCards = [
     verse: "Podcast Ministry",
     description:
       "Listen as Pastor Robert and Carolyn unpack what it means to live with intentional, ongoing prayer.",
-    cta: { label: "Learn More", href: "/ministries/podcast-ministry" },
+    cta: { label: "Learn More", href: "/listen" },
   },
 ];
 
