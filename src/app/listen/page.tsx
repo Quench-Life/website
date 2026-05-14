@@ -34,8 +34,13 @@ const platforms = [
 export default function ListenPage() {
   return (
     <div className="space-y-8">
-      <section className="relative min-h-[28rem] overflow-hidden rounded-2xl bg-slate-900 text-white shadow-sm">
-        <Image src={podcastLogo} alt="Podcast ministry artwork" fill className="object-cover object-center" />
+      <section className="relative min-h-[22rem] overflow-hidden rounded-2xl bg-slate-900 text-white shadow-sm sm:min-h-[28rem]">
+        <Image
+          src={podcastLogo}
+          alt="Podcast ministry artwork"
+          fill
+          className="object-contain object-center sm:object-cover sm:object-center"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/85 to-cyan-900/70" />
         <div className="relative flex h-full flex-col justify-end p-8 sm:p-10">
           <p className="text-sm font-semibold uppercase tracking-[0.15em] text-cyan-200">Listen</p>
