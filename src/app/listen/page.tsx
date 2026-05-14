@@ -44,10 +44,6 @@ export default function ListenPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/85 to-cyan-900/70" />
         <div className="relative flex h-full flex-col justify-end p-8 sm:p-10">
           <p className="text-sm font-semibold uppercase tracking-[0.15em] text-cyan-200">Listen</p>
-          <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Sermons and teaching</h1>
-          <p className="mt-4 max-w-2xl text-slate-200">
-            Stay encouraged with biblical teaching from Quench Life Christian Fellowship throughout the week.
-          </p>
         </div>
       </section>
 
@@ -118,6 +114,18 @@ export default function ListenPage() {
             <p className="mt-2 text-sm text-slate-700">Sundays at 6:30 PM</p>
           </article>
         </div>
+      </section>
+
+      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+        <h2 className="text-xl font-semibold text-slate-900">About One by One</h2>
+        <p className="mt-3 text-slate-700">
+          Jesus Christ our Lord, clearly commands His followers to tell the world about Him (Matthew 28:18-20, Acts
+          1:8). This is a huge task, but because He is always with us we have the power to do it. In chapter 8 of the
+          book of Acts, Philip being led by the Holy Spirit encounters a man of great authority. Philip saw an
+          opportunity to share the gospel of Jesus Christ with him, which resulted in the man believing the gospel and
+          being baptized. From this story, we are encouraged to practically witness to the world &ldquo;One by
+          One.&rdquo;
+        </p>
       </section>
     </div>
   );
