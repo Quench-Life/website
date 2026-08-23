@@ -1,46 +1,26 @@
-import Image from "next/image";
 import Link from "next/link";
-import logoImage from "../../media/logo/QLCF_logo_transparent.png";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/visit", label: "Plan Your Visit" },
-  { href: "/prayer", label: "Prayer" },
-  { href: "/ministries", label: "Ministries" },
+  { href: "/visit", label: "I'm New" },
+  { href: "/connect", label: "Connect" },
+  { href: "/listen", label: "Watch" },
+  { href: "/about", label: "Beliefs" },
   { href: "/give", label: "Give" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
-        <Link href="/" aria-label="Go to home page" className="flex items-center">
-          <Image src={logoImage} alt="Quench Life logo" className="h-16 w-16 object-contain sm:h-[4.5rem] sm:w-[4.5rem]" />
+    <header>
+      <div className="wrap bar">
+        <Link href="/" className="logo" aria-label="Quench Life home">
+          <svg className="mark" viewBox="0 0 40 40" aria-hidden="true">
+            <path d="M20 3.5c6.9 8.6 10.8 14.2 10.8 19.5A10.8 10.8 0 0 1 20 33.8 10.8 10.8 0 0 1 9.2 23c0-5.3 3.9-10.9 10.8-19.5Z" fill="none" stroke="var(--navy)" strokeWidth="2.2" />
+            <path d="M13.2 22.4c1.8 1.7 3.5 1.7 5.2 0s3.5-1.7 5.2 0 3.5 1.7 3.5 1.7M13.6 27.2c1.7 1.6 3.4 1.6 5 0s3.4-1.6 5 0" fill="none" stroke="var(--cyan)" strokeWidth="2.2" strokeLinecap="round" />
+          </svg>
+          <span className="wordmark">Quench Life<small>Christian Fellowship</small></span>
         </Link>
-        <nav className="hidden items-center gap-5 text-sm font-medium text-slate-700 lg:flex">
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="transition-colors hover:text-slate-900">
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-        <Link
-          href="/visit"
-          className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700"
-        >
-          Plan Your Visit
-        </Link>
-      </div>
-      <div className="border-t border-slate-200/80 px-4 py-2 lg:hidden">
-        <nav className="mx-auto flex max-w-6xl items-center gap-4 overflow-x-auto text-sm font-medium text-slate-700">
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="whitespace-nowrap transition-colors hover:text-slate-900">
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <nav aria-label="Main navigation">{navItems.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</nav>
+        <Link className="btn btn-solid" href="/visit">Plan your visit</Link>
       </div>
     </header>
   );

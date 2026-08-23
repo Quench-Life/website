@@ -1,21 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { ExitIntentPopup } from "@/components/exit-intent-popup";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { siteConfig } from "@/lib/site";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -43,10 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="en" className="h-full antialiased">
       {process.env.NEXT_PUBLIC_GA_ID ? (
         <>
           <Script
@@ -58,9 +44,9 @@ export default function RootLayout({
           </Script>
         </>
       ) : null}
-      <body className="min-h-full bg-slate-50 text-slate-900 flex flex-col">
+      <body className="min-h-full flex flex-col">
         <SiteHeader />
-        <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6 lg:px-8">{children}</main>
+        <div className="flex-1">{children}</div>
         <SiteFooter />
         <ExitIntentPopup />
       </body>

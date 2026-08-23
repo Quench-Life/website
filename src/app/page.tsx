@@ -1,230 +1,47 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { HomePhotoCarousel } from "@/components/home-photo-carousel";
-import { NextSundayWidget } from "@/components/next-sunday-widget";
-import { siteConfig } from "@/lib/site";
-import homepageBanner from "../../media/homepage/Quench_WebBanners_Rob&Carolyn.png";
-import homePhotoOne from "../../media/homepage/carousel/podium.jpg";
-import homePhotoTwo from "../../media/homepage/carousel/come_on_in.jpg";
-import homePhotoThree from "../../media/homepage/carousel/IMG_7107.jpg";
 
 export const metadata: Metadata = {
-  title: "Jesus Christ: The Water of Life.",
-  description: "Find rest for your soul and power for your life at Quench Life Dublin.",
-  keywords: siteConfig.seoKeywords,
+  title: "Come thirsty. Never thirst again.",
+  description: "Quench Life Christian Fellowship is a small non-denominational church in Dublin, California.",
 };
 
-const teachingCards = [
-  {
-    title: "Current Message Series: The Book of Hebrews",
-    verse: "Current Message",
-    description:
-      "Join us as we explore the supremacy of Jesus Christ and the power of God's Word for everyday life.",
-    cta: { label: "Join Us — Plan Your Visit", href: "/visit" },
-  },
-  {
-    title: "Bible Life Group",
-    verse: "Wednesdays · 7:30 PM",
-    description: "Grow in Scripture and community through weekly Zoom discussion and practical application.",
-    cta: { label: "Learn More", href: "/ministries/bible-life-group" },
-  },
-  {
-    title: "Podcast Current Episode: A Prayerful Life",
-    verse: "Podcast Ministry",
-    description:
-      "Listen as Pastor Robert and Carolyn unpack what it means to live with intentional, ongoing prayer.",
-    cta: { label: "Learn More", href: "/listen" },
-  },
-];
-
-const beliefCards = [
-  {
-    title: "Jesus Is Lord",
-    scripture: "Philippians 2:9-11",
-    description: "We proclaim Jesus Christ as Lord over every life, every home, and every season.",
-  },
-  {
-    title: "Scripture Is Authority",
-    scripture: "2 Timothy 3:16-17",
-    description: "The Bible is God-breathed, trustworthy, and our foundation for truth and discipleship.",
-  },
-];
-
-const homeCarouselSlides = [
-  { src: homePhotoOne, alt: "Worship podium prepared for service at Quench Life" },
-  { src: homePhotoTwo, alt: "Church member greeting others before service" },
-  { src: homePhotoThree, alt: "Church family speaking at the podium" },
+const cards = [
+  ["Wednesdays · 7:30 PM", "Bible Life Group", "A dozen or so people around a table, working through a book of the Bible together. Bring your questions and something to snack on.", "/connect"],
+  ["Twice monthly", "Men's Discipleship", "Honest conversation about work, family, faith and failure, with men who will not let you coast through it.", "/men"],
+  ["Twice monthly", "Women's Discipleship", "Study, prayer and real friendship across every season of life.", "/women"],
+  ["Anytime", "Ask for prayer", "Tell us what is heavy and a real person will pray for it this week.", "/prayer"],
 ];
 
 export default function Home() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Church",
-    name: siteConfig.name,
-    description: siteConfig.description,
-    telephone: siteConfig.phone,
-    email: siteConfig.email,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: siteConfig.address.street,
-      addressLocality: siteConfig.address.city,
-      addressRegion: siteConfig.address.region,
-      postalCode: siteConfig.address.postalCode,
-    },
-    url: siteConfig.url,
-  };
-
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="space-y-12">
-        <section className="relative overflow-hidden rounded-3xl bg-blue-950 text-white shadow-2xl">
-          <Image
-            src={homepageBanner}
-            alt="Pastor Robert and Carolyn Scott at Quench Life"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-950/95 via-blue-900/90 to-blue-700/75" />
-          <div className="absolute -bottom-24 left-0 right-0 h-56 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.28),transparent_70%)]" />
-
-          <div className="relative p-8 sm:p-12">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-200">Quench Life Dublin</p>
-            <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight sm:text-6xl">Jesus Christ: The Water of Life.</h1>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-blue-100">
-              Find rest for your soul and power for your life at Quench Life Dublin.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/visit"
-                className="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-blue-900 transition hover:bg-blue-50"
-              >
-                Plan Your Visit
-              </Link>
-              <Link
-                href="/our-beliefs"
-                className="rounded-xl border border-blue-200/60 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/20"
-              >
-                Our Beliefs
-              </Link>
+      <a className="skip-link" href="#main">Skip to content</a>
+      <main id="main">
+        <section className="hero">
+          <div className="wrap hero-grid">
+            <div>
+              <p className="eyebrow">A church in Dublin, California</p>
+              <h1 style={{ marginTop: "1.1rem" }}>Come thirsty.<br /><em>Never thirst <span className="hl">again.</span></em></h1>
+              <p className="lede">Everybody&apos;s thirsty for something. We&apos;re a small non-denominational church learning to drink from the one well that doesn&apos;t run dry, and there&apos;s more than enough room at it for you.</p>
+              <div className="cta-row"><Link className="btn btn-solid" href="/visit">What a Sunday looks like</Link><Link className="btn btn-ghost" href="/listen">Watch this week first</Link></div>
+              <dl className="when"><div><dt>Sundays</dt><dd>11:00 AM — in person &amp; online</dd></div><div><dt>Where</dt><dd>7080 Donlon Way, Suite 217<br />Dublin, CA 94568</dd></div><div><dt>Wednesdays</dt><dd>Bible Life Group, 7:30 PM</dd></div></dl>
             </div>
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              <div className="rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-md">
-                <p className="text-sm font-semibold text-white">Sunday Gathering</p>
-                <p className="mt-1 text-sm text-blue-100">11:00 AM · Centered on the Gospel and prayer</p>
-              </div>
-              <div className="rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-md">
-                <p className="text-sm font-semibold text-white">Dublin, CA</p>
-                <p className="mt-1 text-sm text-blue-100">7080 Donlon Way, Ste 217 · Serving the Bay Area</p>
-              </div>
-            </div>
+            <figure className="photo arch"><Image src="/quenchlife/img/hero-after-service.jpg" alt="Two members of Quench Life talking over coffee after a Sunday service" width={1200} height={1500} priority /></figure>
           </div>
         </section>
-
-        <section className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <NextSundayWidget />
-          <HomePhotoCarousel slides={homeCarouselSlides} />
-        </section>
-
-        <section className="space-y-6 rounded-3xl border border-blue-200 bg-white p-8 shadow-sm">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-blue-700">Word of God</p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">Current Teachings</h2>
-            <p className="mt-3 max-w-3xl text-slate-700">
-              Bold, biblical teaching centered on the finished work and present Lordship of Jesus Christ.
-            </p>
-          </div>
-          <div className="grid gap-4 md:grid-cols-3">
-            {teachingCards.map((card) => (
-              <article key={card.title} className="rounded-2xl border border-blue-100 bg-blue-50/60 p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue-700">{card.verse}</p>
-                <h3 className="mt-2 text-xl font-bold text-slate-900">{card.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-700">{card.description}</p>
-                {"cta" in card ? (
-                  <div className="mt-4">
-                    <Link
-                      href={card.cta.href}
-                      className="inline-flex rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700"
-                    >
-                      {card.cta.label}
-                    </Link>
-                  </div>
-                ) : null}
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="rounded-3xl border border-blue-200 bg-gradient-to-r from-blue-900 to-blue-700 p-8 text-white shadow-xl sm:p-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.15em] text-blue-200">Scriptural Foundation</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight">Our Beliefs</h2>
-          <p className="mt-4 max-w-3xl text-blue-100">
-            We are unapologetically centered on Jesus Christ, submitted to His Word, and committed to making disciples.
-          </p>
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
-            {beliefCards.map((belief) => (
-              <article key={belief.title} className="rounded-2xl border border-blue-200/50 bg-white/10 p-5 backdrop-blur-sm">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue-100">{belief.scripture}</p>
-                <h3 className="mt-2 text-xl font-bold">{belief.title}</h3>
-                <p className="mt-2 text-sm text-blue-100">{belief.description}</p>
-              </article>
-            ))}
-          </div>
-          <Link
-            href="/our-beliefs"
-            className="mt-6 inline-block rounded-xl bg-white px-5 py-3 text-sm font-semibold text-blue-900 transition hover:bg-blue-50"
-          >
-            Read Our Beliefs
-          </Link>
-        </section>
-
-        <section className="grid gap-6 lg:grid-cols-[1fr_1.1fr]">
-          <article className="rounded-3xl border border-blue-200 bg-white p-8 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-blue-700">Invitation to Christ</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900">New to Faith? Meet Jesus.</h2>
-            <p className="mt-4 text-slate-700">
-              If you are searching for truth, peace, or a new beginning, we would love to walk with you through the Gospel.
-            </p>
-            <ul className="mt-4 space-y-2 text-sm text-slate-700">
-              <li>• Learn what it means to follow Jesus Christ</li>
-              <li>• Request prayer from our church family</li>
-              <li>• Talk with a pastor about next steps in faith</li>
-            </ul>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/our-beliefs"
-                className="rounded-xl bg-blue-800 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
-              >
-                Learn the Gospel
-              </Link>
-              <Link
-                href="/prayer"
-                className="rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-100"
-              >
-                Request Prayer
-              </Link>
-            </div>
-          </article>
-          <article className="rounded-3xl border border-blue-200 bg-white p-6 shadow-sm">
-            <div className="overflow-hidden rounded-2xl border border-blue-100">
-              <iframe
-                title="Map to Quench Life Christian Fellowship"
-                src="https://www.google.com/maps?q=7080%20Donlon%20Way%20Suite%20217%20Dublin%20CA%2094568&output=embed"
-                loading="lazy"
-                className="h-80 w-full"
-              />
-            </div>
-            <Link
-              href="/visit"
-              className="mt-5 inline-block text-sm font-semibold text-blue-800 underline-offset-4 hover:underline"
-            >
-              Get directions and plan your first Sunday →
-            </Link>
-          </article>
-        </section>
-      </div>
+        <div className="curve"><svg viewBox="0 0 1440 88" preserveAspectRatio="none" width="100%" height="100%"><path d="M0 88V30c240-42 480 32 720 32s480-74 720-32v58Z" /></svg></div>
+        <section className="band"><div className="wrap">
+          <div className="sec-head"><p className="eyebrow">Your first Sunday</p><h2>Here&apos;s exactly what happens, so <span className="hl">nothing</span> catches you off guard.</h2><p className="lede">No spotlight, no name tag, no standing up to introduce yourself. Just an hour and a quarter you can walk into cold.</p></div>
+          <div className="steps">{[["10:45 – 11:00 AM", "You walk in", "Free parking right out front. Someone meets you at the door with coffee and shows you a seat."], ["11:00 AM – 12:15 PM", "We sing, then open the Word", "About 25 minutes of worship, then a teaching straight out of Scripture. Kids can stay with you or head to their own class."], ["12:15 PM onward", "Nobody hurries off", "More coffee, real questions, prayer if you want it, and usually somebody inviting somebody else to lunch."]].map(([time, title, text]) => <article className="step" key={title}><span className="clock">{time}</span><h3>{title}</h3><p>{text}</p></article>)}</div>
+        </div></section>
+        <section><div className="narrow"><div className="sec-head"><p className="eyebrow">The questions people actually ask</p><h2>Honest answers, no church-speak.</h2></div><div className="qa">{[["What should I wear?", "Whatever you&apos;d wear to meet a friend for brunch. Jeans are normal here."], ["Will you ask me for money?", "Guests are welcome to keep their wallet in their pocket. Giving is for people who call this home."], ["I&apos;m not sure what I believe. Is that a problem?", "Not remotely. Sit in the back, listen, and ask hard questions whenever you&apos;re ready."], ["Can I just watch online first?", "Yes. Services stream live every Sunday at 11:00 AM and stay up afterward."]].map(([q, a]) => <details key={q}><summary>{q}</summary><div className="answer">{a}</div></details>)}</div></div></section>
+        <section className="verse"><div className="narrow"><blockquote>Whoever <span className="drink">drinks</span> the water I give them will never thirst.</blockquote><cite>John 4:14 · the verse we&apos;re named for</cite></div></section>
+        <section id="connect"><div className="wrap"><div className="sec-head"><p className="eyebrow">Room at the well</p><h2>Sunday is the front door. This is where it gets personal.</h2><p className="lede">Church happens in living rooms as much as in rows of chairs. Pick whichever door feels least intimidating.</p></div><div className="cards">{cards.map(([tag, title, text, href]) => <article className="card" key={title}><span className="when-chip">{tag}</span><h3>{title}</h3><p>{text}</p><Link className="more" href={href}>Find out more →</Link></article>)}</div></div></section>
+        <section className="band"><div className="wrap watch"><div className="player"><Image src="/quenchlife/img/sermon-poster.jpg" alt="Sermon poster for the latest Quench Life message" width={1280} height={800} /><button className="play" aria-label="Play the latest message">▶</button></div><div><p className="eyebrow">Watch &amp; listen</p><h2 style={{ marginTop: ".8rem", fontSize: "clamp(2rem,4.2vw,3rem)", fontWeight: 300 }}>Catch up from your kitchen table.</h2><p className="lede" style={{ marginTop: "1.1rem" }}>Every service streams live Sunday at 11:00 AM and is archived right after.</p><div className="cta-row"><Link className="btn btn-solid" href="/listen">Watch the latest</Link><Link className="btn btn-ghost" href="/listen">Listen to the podcast</Link></div></div></div></section>
+        <section><div className="wrap split"><figure className="photo arch"><Image src="/quenchlife/img/congregation-singing.jpg" alt="The Quench Life congregation singing together" width={1200} height={1344} /></figure><div><p className="eyebrow">What we&apos;re here for</p><h2 style={{ marginTop: ".8rem", fontSize: "clamp(2rem,4.2vw,3rem)", fontWeight: 300 }}>Lead people to Jesus. Grow them up. Send them out.</h2><p className="lede" style={{ marginTop: "1.3rem" }}>Our mission is to lead people to Jesus and membership in His family, develop them to Christ-like maturity, and equip them for their ministry.</p><div className="cta-row"><Link className="btn btn-ghost" href="/about">Read what we believe</Link><Link className="btn btn-ghost" href="/about">Meet our leaders</Link></div></div></div></section>
+      </main>
     </>
   );
 }
