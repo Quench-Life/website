@@ -89,8 +89,8 @@ section { position: relative; padding: clamp(3.6rem, 7.5vw, 6.5rem) 0; }
 .verse, .promise { position: relative; overflow: hidden; background: var(--navy); color: var(--on-navy); text-align: center; font-style: italic; }
 .verse { padding: clamp(7rem, 12vw, 10rem) 0; }
 .verse::before, .verse::after { position: absolute; left: -5%; width: 110%; height: 72px; background: var(--ground); content: ""; }
-.verse::before { top: -1px; clip-path: polygon(0 0, 100% 0, 100% 48%, 92% 57%, 84% 45%, 76% 60%, 68% 44%, 60% 58%, 52% 43%, 44% 59%, 36% 45%, 28% 57%, 20% 44%, 12% 60%, 4% 46%, 0 52%); }
-.verse::after { bottom: -1px; clip-path: polygon(0 48%, 4% 54%, 12% 40%, 20% 56%, 28% 43%, 36% 55%, 44% 41%, 52% 57%, 60% 42%, 68% 56%, 76% 40%, 84% 55%, 92% 43%, 100% 52%, 100% 100%, 0 100%); }
+.verse::before { top: -1px; border-radius: 0 0 50% 50% / 0 0 100% 100%; }
+.verse::after { bottom: -1px; border-radius: 50% 50% 0 0 / 100% 100% 0 0; }
 .verse blockquote { max-width: 19ch; margin: 0 auto; font-size: clamp(2.1rem, 5.5vw, 3.9rem); font-style: italic; font-weight: 200; line-height: 1.16; }
 .drink { color: var(--cyan); }
 .verse cite { display: block; margin-top: 2.2rem; color: rgba(243,239,232,.6); font-size: 11px; letter-spacing: .26em; text-transform: uppercase; }
