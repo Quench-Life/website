@@ -1,72 +1,7 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Give",
-  description: "Give online, with Zelle, in person, or by mail at Quench Life Christian Fellowship.",
-};
+export const metadata: Metadata = { title: "Give", description: "Give to Quench Life Christian Fellowship online, by Zelle, in person, or by mail." };
 
 export default function GivePage() {
-  return (
-    <div className="space-y-8">
-      <section className="rounded-2xl bg-slate-900 p-8 text-white shadow-sm sm:p-10">
-        <p className="text-sm font-semibold uppercase tracking-[0.15em] text-amber-200">Give</p>
-        <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Generosity with purpose</h1>
-        <p className="mt-4 max-w-3xl text-slate-200">
-          Your giving helps people encounter Jesus, grow in faith, and experience practical care through the ministry
-          of Quench Life Christian Fellowship.
-        </p>
-      </section>
-
-      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-        <p className="text-slate-700">
-          “Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion,
-          for God loves a cheerful giver.” — <span className="italic">2 Corinthians 9:7</span>
-        </p>
-      </section>
-
-      <section className="grid gap-6 md:grid-cols-2">
-        <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-semibold text-slate-900">Give Online</h2>
-          <p className="mt-3 text-sm text-slate-700">
-            Make your gift securely through our online giving platform.
-          </p>
-          <a
-            href="https://giving.myamplify.io/app/giving/Quen6937408"
-            target="_blank"
-            rel="noreferrer"
-            className="mt-5 inline-block rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700"
-          >
-            Give Online
-          </a>
-        </article>
-
-        <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-semibold text-slate-900">Donate with Zelle</h2>
-          <p className="mt-3 text-sm text-slate-700">
-            Use Zelle to give quickly from your bank app.
-          </p>
-          <a
-            href="https://www.zelle.com/get-started"
-            target="_blank"
-            rel="noreferrer"
-            className="mt-5 inline-block rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 transition hover:bg-slate-100"
-          >
-            Donate with Zelle
-          </a>
-        </article>
-      </section>
-
-      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-        <h2 className="text-xl font-semibold text-slate-900">Secure Giving Options</h2>
-        <ul className="mt-4 space-y-2 text-sm text-slate-700">
-          <li>• Give online using the secure link above.</li>
-          <li>• Donate with Zelle using the link above.</li>
-          <li>• Give in person during Sunday service at 11:00 AM.</li>
-          <li>• Give by mail: Send checks or money orders to:</li>
-          <li className="pl-4">Quench Life Christian Fellowship</li>
-          <li className="pl-4">P.O. Box 2934, Dublin, CA 94568</li>
-        </ul>
-      </section>
-    </div>
-  );
+  return <main><section className="page-hero"><div className="wrap"><p className="eyebrow">Give</p><h1>Support the work of <span className="hl">Quench Life.</span></h1><p className="lede" style={{ marginTop: "1.4rem" }}>Giving supports Sunday worship, discipleship gatherings, prayer ministry, and practical care through Quench Life Christian Fellowship.</p></div></section><section className="band"><div className="wrap cards"><article className="card"><span className="when-chip">Online</span><h2>Give online</h2><p>Use our secure giving platform to make a one-time or recurring gift.</p><a className="btn btn-solid" href="https://giving.myamplify.io/app/giving/Quen6937408" target="_blank" rel="noreferrer">Give online</a></article><article className="card"><span className="when-chip">Bank app</span><h2>Give with Zelle</h2><p>Send a gift through your bank&apos;s Zelle service.</p><a className="btn btn-ghost" href="https://www.zelle.com/get-started" target="_blank" rel="noreferrer">Open Zelle</a></article></div></section><section><div className="narrow"><div className="sec-head"><p className="eyebrow">Other ways to give</p><h2>Choose the method that works for you.</h2></div><div className="qa"><details open><summary>Give in person</summary><div className="answer">Bring a gift to Sunday service at 11:00 AM, at 7080 Donlon Way, Suite 217, Dublin, CA 94568.</div></details><details><summary>Give by mail</summary><div className="answer">Quench Life Christian Fellowship<br />P.O. Box 2934<br />Dublin, CA 94568</div></details></div></div></section></main>;
 }

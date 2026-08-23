@@ -1,58 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Connect",
-  description: "Explore weekly opportunities to connect with Quench Life Christian Fellowship.",
-};
+export const metadata: Metadata = { title: "Connect", description: "Find a small group, discipleship gathering, or prayer support at Quench Life." };
+
+const groups = [
+  ["Wednesdays · 7:30 PM", "Bible Life Group", "A weekly Zoom discussion about a book of the Bible. Bring your questions and a Bible.", "/ministries/bible-life-group"],
+  ["Twice monthly", "Men's Discipleship", "Conversation about work, family, faith, and failure with men from Quench Life.", "/ministries/mens-discipleship"],
+  ["Twice monthly", "Women's Discipleship", "Bible study, prayer, and friendship across different seasons of life.", "/ministries/womens-discipleship"],
+];
 
 export default function ConnectPage() {
-  return (
-    <div className="space-y-8">
-      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Connect with us</h1>
-        <p className="mt-4 max-w-3xl text-slate-700">
-          Explore the many ways to connect throughout the week through worship, prayer, and discipleship.
-        </p>
-      </section>
-
-      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-        <h2 className="text-xl font-semibold text-slate-900">Weekly Connection Points</h2>
-        <ul className="mt-4 space-y-3 text-slate-700">
-          {siteConfig.weeklyConnections.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="grid gap-6 md:grid-cols-3">
-        <Link href="/visit" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:bg-slate-100">
-          <h3 className="text-lg font-semibold text-slate-900">Sunday Service</h3>
-          <p className="mt-2 text-sm leading-6 text-slate-700">Online every Sunday at 11:00 AM.</p>
-        </Link>
-        <Link href="/events" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:bg-slate-100">
-          <h3 className="text-lg font-semibold text-slate-900">Events & Ministries</h3>
-          <p className="mt-2 text-sm leading-6 text-slate-700">Bible Life Group, men&apos;s and women&apos;s discipleship, and more.</p>
-        </Link>
-        <Link href="/prayer" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:bg-slate-100">
-          <h3 className="text-lg font-semibold text-slate-900">Prayer</h3>
-          <p className="mt-2 text-sm leading-6 text-slate-700">Join Sunrise Prayer on Mondays at 6:30 AM.</p>
-        </Link>
-      </section>
-
-      <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-        <h2 className="text-xl font-semibold text-slate-900">LSC Promo</h2>
-        <p className="mt-3 text-slate-700">
-          Watch the latest Life Support Class promotional video and share it with someone who should join.
-        </p>
-        <div className="mt-5 overflow-hidden rounded-2xl border border-slate-200">
-          <video controls preload="metadata" className="h-auto w-full">
-            <source src="/api/media/lsc-promo" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </section>
-    </div>
-  );
+  return <main>
+    <section className="page-hero"><div className="wrap"><p className="eyebrow">Room at the well</p><h1>Find a place to <span className="hl">belong.</span></h1><p className="lede" style={{ marginTop: "1.4rem" }}>Sunday service is one place to start. These gatherings make room for questions, prayer, and regular conversation.</p></div></section>
+    <section className="band"><div className="wrap"><div className="sec-head"><p className="eyebrow">Weekly connections</p><h2>Choose a starting point.</h2></div><div className="cards">{groups.map(([tag, title, text, href]) => <article className="card" key={title}><span className="when-chip">{tag}</span><h3>{title}</h3><p>{text}</p><Link className="more" href={href}>Learn more →</Link></article>)}</div></div></section>
+    <section><div className="wrap prayer"><div><p className="eyebrow">Prayer requests</p><h2 style={{ marginTop: ".8rem", fontSize: "clamp(2rem,4.4vw,3rem)", fontWeight: 300 }}>Send a request to the prayer team.</h2><p className="lede" style={{ marginTop: "1.1rem" }}>Use the prayer form to share as much or as little as you want. Requests go to the church team.</p></div><div><Link className="btn btn-solid" href="/prayer">Request prayer</Link></div></div></section>
+  </main>;
 }
